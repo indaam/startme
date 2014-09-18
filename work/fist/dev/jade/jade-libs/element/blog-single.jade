@@ -1,0 +1,35 @@
+include ../asset/mixin
+
+.blog-single
+  article.hentry
+    .entry-container
+      .framebox
+      // End framebox
+      header.entry-header
+        +entry_title("just title")
+
+      .entry-meta
+        +entry_meta_time
+        +entry_meta_author
+        +comment_link
+
+      // End .entry-meta
+      +nl
+
+      .entry-summary
+        +typo_test
+      // End .entry-summary
+      +nl
+
+      .entry-meta
+        +entry_meta_tag
+        +entry_meta_category
+
+      +nl
+
+      +post_author
+
+  // End .hentry
+  +nl
+// End .blog-single
++nl

@@ -1,0 +1,145 @@
+footer#page-footer.site-footer.cl(role='contentinfo')
+
+  .footer-widget
+    .container
+
+      .widget-col
+
+        section.widget.widget_text.widget-widget_text
+          .widget-wrap.widget-inside
+            h3.widget-title About Sandrea
+            .textwidget
+
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, nobis quam possimus aut quas nulla voluptatum necessitatibus sequi deserunt qui repellendus tempora exercitationem itaque quisquam sapiente est culpa accusantium soluta error rerum distinctio eum sunt officia eaque quibusdam cumque dolorem amet doloremque inventore. Iure, suscipit, illum, rem, aliquam veniam animi reiciendis nulla esse porro qui ea expedita totam inventore assumenda accusamus est nobis officia deleniti sapiente excepturi ipsam debitis sunt dolore quae magnam cupiditate fuga consequatur quisquam libero minima quas dicta corrupti enim eaque sit optio id laudantium dolorem error facere tempore aperiam iste sint repellat vero fugiat non quidem.
+
+      // End .widget-col
+
+      .widget-col
+
+        section.widget.widget_text.widget-widget_text
+          .widget-wrap.widget-inside
+            h3.widget-title Tell us
+            .textwidget
+
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, nobis quam possimus aut quas nulla voluptatum necessitatibus sequi deserunt qui repellendus tempora exercitationem itaque quisquam sapiente est culpa accusantium soluta error rerum distinctio eum sunt officia eaque quibusdam cumque dolorem amet doloremque inventore. Iure, suscipit, illum, rem, aliquam veniam animi reiciendis nulla esse porro qui ea expedita totam inventore assumenda accusamus est nobis officia deleniti sapiente excepturi ipsam debitis sunt dolore quae magnam cupiditate fuga consequatur quisquam libero minima quas dicta corrupti enim eaque sit optio id laudantium dolorem error facere tempore aperiam iste sint repellat vero fugiat non quidem.
+
+        
+      // End .widget-col
+
+      .widget-col
+        section.widget.woocommerce.widget_product_tag_cloud.widget-woocommerce.widget_product_tag_cloud
+          .widget-wrap.widget-inside
+            h3.widget-title Product Tags
+            .tagcloud
+              a.tag-link-211(style='font-size: 22pt;', href='#', title='') bags
+              a.tag-link-214(style='font-size: 13.6pt;', href='#', title='') bikini
+              a.tag-link-212(style='font-size: 13.6pt;', href='#', title='') jeans
+              a.tag-link-215(style='font-size: 8pt;', href='#', title='') lingerie
+              a.tag-link-216(style='font-size: 8pt;', href='#', title='') other
+              a.tag-link-213(style='font-size: 18.266666666667pt;', href='#', title='') t-shirt
+      // End .widget-col
+
+      .widget-col
+        section.widget.archives.widget-archives
+          .widget-wrap.widget-inside
+            h3.widget-title Archives
+            ul.xoxo.archives
+              li
+                a(href='#', title='') July 2013
+              li
+                a(href='#', title='') January 2013
+              li
+                a(href='#', title='') March 2012
+              li
+                a(href='#', title='') January 2012
+              li
+                a(href='#', title='') March 2011
+              li
+                a(href='#', title='') October 2010
+              li
+                a(href='#', title='') September 2010
+              li
+                a(href='#', title='') August 2010
+              li
+                a(href='#', title='') July 2010
+              li
+                a(href='#', title='') June 2010
+      // End .widget-col
+  .footer-info
+    .container
+      .cl
+        nav(class="site-navigation subsidiary-navigation", role="navigation")
+          ul
+            each subsidiary, index in ['home', 'Products', 'cart', 'blog', 'Archive', 'contact']
+              li
+                a(href="#")
+                  | #{subsidiary}
+
+        div.new-social-wrap
+          each social, index in ['facebook', 'twitter', 'rss', 'youtube']
+            a(href="#", class="new-social new-" + social, title="follow on" + social)
+                | #{social}
+      p.footer-payment
+        img(src="img/payment.jpg", alt="")
+      p.credit © Created by Sandrea. Next inspiration.
+
+// End footer#colophon.site-footer.cl(role='contentinfo')
+
+#s-settings
+  a.button-setting(href='#') Setting
+  .inner
+    .tt-layout
+      h3.title-setting Layout
+      ul
+        li
+          a(href='#', data-layout='default-layout') default
+        li
+          a(href='#', data-layout='box-layout') box
+    .tt-bg-pattern
+      h3.title-setting Main pattern
+      ul
+        li
+          a(href='#', data-pattern='pattern1') pattern1
+        li
+          a(href='#', data-pattern='pattern2') pattern2
+        li
+          a(href='#', data-pattern='pattern3') pattern3
+        li
+          a(href='#', data-pattern='pattern4') pattern4
+        li
+          a(href='#', data-pattern='pattern5') pattern5
+        li
+          a(href='#', data-pattern='pattern6') pattern6
+        li
+          a(href='#', data-pattern='pattern7') pattern7
+        li
+          a(href='#', data-pattern='pattern8') pattern8
+        li
+          a(href='#', data-pattern='pattern9') pattern9
+        li
+          a(href='#', data-pattern='pattern10') pattern10
+    .tt-bg-pattern-widget
+      h3.title-setting pattern widget
+      ul
+        li
+          a(href='#', data-pattern-widget='pattern1') pattern1
+        li
+          a(href='#', data-pattern-widget='pattern2') pattern2
+        li
+          a(href='#', data-pattern-widget='pattern3') pattern3
+        li
+          a(href='#', data-pattern-widget='pattern4') pattern4
+        li
+          a(href='#', data-pattern-widget='pattern5') pattern5
+        li
+          a(href='#', data-pattern-widget='pattern6') pattern6
+        li
+          a(href='#', data-pattern-widget='pattern7') pattern7
+        li
+          a(href='#', data-pattern-widget='pattern8') pattern8
+        li
+          a(href='#', data-pattern-widget='pattern9') pattern9
+        li
+          a(href='#', data-pattern-widget='pattern10') pattern10
+    a.reset-default(href='#')
+      | reset default

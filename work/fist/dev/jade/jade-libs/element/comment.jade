@@ -1,0 +1,697 @@
+mixin nl
+  // .
+
+#comments-template
+  .comments-wrap
+    #comments.comments
+      h3#comments-number.comments-header.comment-title 19 Responses
+      ol.commentlist
+        li.comment
+          .comment-wrap
+            a(href='#', rel='external nofollow')
+              img.avatar.photo(src='dummy/avatar.jpg', alt='')
+            .comment-meta
+              span.comment-author.vcard
+                cite.fn
+                  a.url(href='#', rel='external nofollow') John Doe
+                | -
+              span.published
+                time.comment-date September 3, 2012
+                | at
+                time.comment-time 10:18 am
+              | -
+              a.permalink(href='#') Permalink
+              | -
+              a.comment-edit-link(href='#')
+                span.edit Edit
+              | -
+              a.comment-reply-link(href='#') Reply
+            .comment-content.comment-text.comment-body
+              h2 Headings
+              h1 Header one
+              h2 Header two
+              h3 Header three
+              h4 Header four
+              h5 Header five
+              h6 Header six
+              h2 Blockquotes
+              p Single line blockquote:
+              blockquote
+                p Stay hungry. Stay foolish.
+              p Multi line blockquote with a cite reference:
+              blockquote
+                p
+                  | People think focus means saying yes to the thing you&rsquo;ve got to focus on. But that&rsquo;s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I&rsquo;m actually as proud of the things we haven&rsquo;t
+                  done
+                    | as the things I have done. Innovation is saying no to 1,000 things.
+                    cite Steve Jobs &ndash; Apple Worldwide Developers&rsquo; Conference, 1997
+              h2 Tables
+              table
+                tbody
+                  tr
+                    th Employee
+                    th.views Salary
+                    th
+                  tr.odd
+                    td
+                      a(href='#', rel='nofollow') John Saddington
+                    td $1
+                    td Because that&rsquo;s all Steve Job&rsquo; needed for a salary.
+                  tr.even
+                    td
+                      a(href='#', rel='nofollow') Tom McFarlin
+                    td $100K
+                    td For all the blogging he does.
+                  tr.odd
+                    td
+                      a(href='#', rel='nofollow') Jared Erickson
+                    td $100M
+                    td Pictures are worth a thousand words, right? So Tom x 1,000.
+                  tr.even
+                    td
+                      a(href='#', rel='nofollow') Chris Ames
+                    td $100B
+                    td With hair like that?! Enough said&hellip;
+              h2 Definition Lists
+              dl
+                dt Definition List Title
+                dd Definition list division.
+                dt Startup
+                dd
+                  | A startup company or startup is a company or temporary organization designed to search for a repeatable and scalable business model.
+                dt #dowork
+                dd
+                  | Coined by Rob Dyrdek and his personal body guard Christopher &ldquo;Big Black&rdquo; Boykins, &ldquo;Do Work&rdquo; works as a self motivator, to motivating your friends.
+                dt Do It Live
+                dd
+                  | I&rsquo;ll let Bill O&rsquo;Reilly will
+                  a(href='#', rel='nofollow') explain
+                  | this one.
+              h2 Unordered Lists (Nested)
+              ul
+                li
+                  | List item one
+                  ul
+                    li
+                      | List item one
+                      ul
+                        li List item one
+                        li List item two
+                        li List item three
+                        li List item four
+                    li List item two
+                    li List item three
+                    li List item four
+                li List item two
+                li List item three
+                li List item four
+              h2 Ordered List (Nested)
+              ol
+                li
+                  | List item one
+                  ol
+                    li
+                      | List item one
+                      ol
+                        li List item one
+                        li List item two
+                        li List item three
+                        li List item four
+                    li List item two
+                    li List item three
+                    li List item four
+                li List item two
+                li List item three
+                li List item four
+              h2 HTML Tags
+              p
+                | These supported tags come from the WordPress.com code
+                a(href='#', rel='nofollow') FAQ
+                | .
+              p
+                strong Address Tag
+              address
+                | 1 Infinite Loop
+                br
+                | Cupertino, CA 95014
+                br
+                | United States
+              p
+                strong Anchor Tag (aka. Link)
+              p
+                | This is an example of a
+                a(href='#', rel='nofollow') link
+                | .
+              p
+                strong Abbreviation Tag
+              p
+                | The abbreviation
+                abbr srsly
+                | stands for &ldquo;seriously&rdquo;.
+              p
+                strong Acronym Tag
+              p
+                | The acronym
+                acronym ftw
+                | stands for “for the win”.
+              p
+                strong Big Tag
+              p
+                | These tests are a
+                big big
+                | deal, but this tag is no longer supported in HTML5.
+              p
+                strong Cite Tag
+              p
+                | &ldquo;Code is poetry.&rdquo; &ndash;
+                cite Automattic
+              p
+                strong Code Tag
+              p
+                | You will learn later on in these tests that
+                code word-wrap: break-word;
+                | will be your best friend.
+              p
+                strong Delete Tag
+              p
+                | This tag will let you
+                del strikeout text
+                | , but this tag is no longer supported in HTML5 (use the
+                code
+                  strike instead).
+              p
+                strong Emphasize Tag
+              p
+                | The emphasize tag should
+                em italicize
+                | text.
+              p
+                strong Insert Tag
+              p
+                | This tag should denote
+                ins inserted
+                | text.
+              p
+                strong Keyboard Tag
+              p
+                | This scarcely known tag emulates
+                kbd keyboard text
+                | , which is usually styled like the
+                code code tag.
+              p
+                strong Preformatted Tag
+              p This tag styles large blocks of code.
+              pre.
+                .post-title {  margin: 0 0 5px;  font-weight: bold;  font-size: 38px;  line-height: 1.2;  }                
+              p
+                strong Quote Tag
+              p
+                q Developers, developers, developers &hellip;
+                | &ndash;Steve Ballmer
+              p
+                strong Strong Tag
+              p
+                | This tag shows
+                strong bold
+                strong text.
+              p
+                strong Subscript Tag
+              p
+                | Getting our science styling on with H
+                sub 2
+                | O, which should push the &ldquo;2&ldquo; down.
+              p
+                strong Superscript Tag
+              p
+                | Still sticking with science and Isaac Newton&rsquo;s E = MC
+                sup 2
+                | , which should lift the 2 up.
+              p
+                strong Teletype Tag
+              p
+                | This rarely used tag emulates
+                tt teletype text
+                | , which is usually styled like the
+                code code tag.
+              p
+                strong Variable Tag
+              p
+                | This allows you to denote
+                var variables
+                | .
+        li.comment
+          .comment-wrap
+            img.avatar.photo(src='dummy/avatar.jpg', alt='')
+            .comment-meta
+              span.comment-author.vcard
+                cite.fn Anonymous User
+                | -
+              span.published
+                time.comment-date March 11, 2013
+                | at
+                time.comment-time 11:45 pm
+              | -
+              a.permalink(href='#') Permalink
+              | -
+              a.comment-edit-link(href='#')
+                span.edit Edit
+              | -
+              a.comment-reply-link(href='#') Reply
+            .comment-content.comment-text.comment-body
+              p This user it trying to be anonymous.
+              p
+                | They used a fake email, so there should be no
+                a(href='#', rel='nofollow') Gravatar
+                | associated with it.
+                br
+                | They did not speify a website, so there should be no link to it in the comment.
+        li.comment
+          .comment-wrap
+            a(href='#', rel='external nofollow')
+              img.avatar.photo(src='dummy/avatar.jpg', alt='')
+            .comment-meta
+              span.comment-author.vcard
+                cite.fn
+                  a.url(href='#', rel='external nofollow') Jane Doe
+                | -
+              span.published
+                time.comment-date March 12, 2013
+                | at
+                time.comment-time 1:17 pm
+              | -
+              a.permalink(href='#') Permalink
+              | -
+              a.comment-edit-link(href='#')
+                span.edit Edit
+              | -
+              a.comment-reply-link(href='#') Reply
+            .comment-content.comment-text.comment-body
+              p Comments? I love comments!
+        li.comment
+          .comment-wrap
+            a(href='#', rel='external nofollow')
+              img.avatar.photo(src='dummy/avatar.jpg', alt='')
+            .comment-meta
+              span.comment-author.vcard
+                cite.fn
+                  a.url(href='#', rel='external nofollow') John Doe
+                | -
+              span.published
+                time.comment-date March 14, 2013
+                | at
+                time.comment-time 7:53 am
+              | -
+              a.permalink(href='#') Permalink
+              | -
+              a.comment-edit-link(href='#')
+                span.edit Edit
+              | -
+              a.comment-reply-link(href='#') Reply
+            .comment-content.comment-text.comment-body
+              p These tests are amazing!
+        li.comment
+          .comment-wrap
+            a(href='#', rel='external nofollow')
+              img.avatar.photo(src='dummy/avatar.jpg', alt='')
+            .comment-meta
+              span.comment-author.vcard
+                cite.fn
+                  a.url(href='#', rel='external nofollow') John Doe
+                | -
+              span.published
+                time.comment-date March 14, 2013
+                | at
+                time.comment-time 7:56 am
+              | -
+              a.permalink(href='#') Permalink
+              | -
+              a.comment-edit-link(href='#')
+                span.edit Edit
+              | -
+              a.comment-reply-link(href='#') Reply
+            .comment-content.comment-text.comment-body
+              p Author Comment.
+        li.comment
+          .comment-wrap
+            a(href='#', rel='external nofollow')
+              img.avatar.photo(src='dummy/avatar.jpg', alt='')
+            .comment-meta
+              span.comment-author.vcard
+                cite.fn
+                  a.url(href='#', rel='external nofollow') John Doe
+                | -
+              span.published
+                time.comment-date March 14, 2013
+                | at
+                time.comment-time 7:57 am
+              | -
+              a.permalink(href='#') Permalink
+              | -
+              a.comment-edit-link(href='#')
+                span.edit Edit
+              | -
+              a.comment-reply-link(href='#') Reply
+            .comment-content.comment-text.comment-body
+              p Comment Depth 01
+          ol.children
+            li.comment
+              .comment-wrap
+                a(href='#', rel='external nofollow')
+                  img.avatar.photo(src='dummy/avatar.jpg', alt='')
+                .comment-meta
+                  span.comment-author.vcard
+                    cite.fn
+                      a.url(href='#', rel='external nofollow') Jane Bloggs
+                    | -
+                  span.published
+                    time.comment-date March 14, 2013
+                    | at
+                    time.comment-time 8:01 am
+                  | -
+                  a.permalink(href='#') Permalink
+                  | -
+                  a.comment-edit-link(href='#')
+                    span.edit Edit
+                  | -
+                  a.comment-reply-link(href='#') Reply
+                .comment-content.comment-text.comment-body
+                  p Comment Depth 02
+              ol.children
+                li.comment
+                  .comment-wrap
+                    a(href='#', rel='external nofollow')
+                      img.avatar.photo(src='dummy/avatar.jpg', alt='')
+                    .comment-meta
+                      span.comment-author.vcard
+                        cite.fn
+                          a.url(href='#', rel='external nofollow') Fred Bloggs
+                        | -
+                      span.published
+                        time.comment-date March 14, 2013
+                        | at
+                        time.comment-time 8:02 am
+                      | -
+                      a.permalink(href='#') Permalink
+                      | -
+                      a.comment-edit-link(href='#')
+                        span.edit Edit
+                      | -
+                      a.comment-reply-link(href='#') Reply
+                    .comment-content.comment-text.comment-body
+                      p Comment Depth 03
+                  ol.children
+                    li.comment
+                      .comment-wrap
+                        a(href='#', rel='external nofollow')
+                          img.avatar.photo(src='dummy/avatar.jpg', alt='')
+                        .comment-meta
+                          span.comment-author.vcard
+                            cite.fn
+                              a.url(href='#', rel='external nofollow') Fred Bloggs
+                            | -
+                          span.published
+                            time.comment-date March 14, 2013
+                            | at
+                            time.comment-time 8:03 am
+                          | -
+                          a.permalink(href='#') Permalink
+                          | -
+                          a.comment-edit-link(href='#')
+                            span.edit Edit
+                          | -
+                          a.comment-reply-link(href='#') Reply
+                        .comment-content.comment-text.comment-body
+                          p Comment Depth 04
+                      ol.children
+                        li.comment
+                          .comment-wrap
+                            a(href='#', rel='external nofollow')
+                              img.avatar.photo(src='dummy/avatar.jpg', alt='')
+                            .comment-meta
+                              span.comment-author.vcard
+                                cite.fn
+                                  a.url(href='#', rel='external nofollow') Joe Bloggs
+                                | -
+                              span.published
+                                time.comment-date March 14, 2013
+                                | at
+                                time.comment-time 8:10 am
+                              | -
+                              a.permalink(href='#') Permalink
+                              | -
+                              a.comment-edit-link(href='#')
+                                span.edit Edit
+                            .comment-content.comment-text.comment-body
+                              p Comment Depth 05
+                              p Also an author comment.
+                        li.comment
+                          .comment-wrap
+                            a(href='#', rel='external nofollow')
+                              img.avatar.photo(src='dummy/avatar.jpg', alt='')
+                            .comment-meta
+                              span.comment-author.vcard
+                                cite.fn
+                                  a.url(href='#', rel='external nofollow') Jane Bloggs
+                                | -
+                              span.published
+                                time.comment-date March 14, 2013
+                                | at
+                                time.comment-time 8:12 am
+                              | -
+                              a.permalink(href='#') Permalink
+                              | -
+                              a.comment-edit-link(href='#')
+                                span.edit Edit
+                            .comment-content.comment-text.comment-body
+                              p Comment Depth 06
+                        li.comment
+                          .comment-wrap
+                            a(href='#', rel='external nofollow')
+                              img.avatar.photo(src='dummy/avatar.jpg', alt='')
+                            .comment-meta
+                              span.comment-author.vcard
+                                cite.fn
+                                  a.url(href='#', rel='external nofollow') Joe Bloggs
+                                | -
+                              span.published
+                                time.comment-date March 14, 2013
+                                | at
+                                time.comment-time 8:12 am
+                              | -
+                              a.permalink(href='#') Permalink
+                              | -
+                              a.comment-edit-link(href='#')
+                                span.edit Edit
+                            .comment-content.comment-text.comment-body
+                              p Comment Depth 07
+                        li.comment
+                          .comment-wrap
+                            a(href='#', rel='external nofollow')
+                              img.avatar.photo(src='dummy/avatar.jpg', alt='')
+                            .comment-meta
+                              span.comment-author.vcard
+                                cite.fn
+                                  a.url(href='#', rel='external nofollow') Jane Bloggs
+                                | -
+                              span.published
+                                time.comment-date March 14, 2013
+                                | at
+                                time.comment-time 8:13 am
+                              | -
+                              a.permalink(href='#') Permalink
+                              | -
+                              a.comment-edit-link(href='#')
+                                span.edit Edit
+                            .comment-content.comment-text.comment-body
+                              p Comment Depth 08
+                        li.comment
+                          .comment-wrap
+                            a(href='#', rel='external nofollow')
+                              img.avatar.photo(src='dummy/avatar.jpg', alt='')
+                            .comment-meta
+                              span.comment-author.vcard
+                                cite.fn
+                                  a.url(href='#', rel='external nofollow') Joe Bloggs
+                                | -
+                              span.published
+                                time.comment-date March 14, 2013
+                                | at
+                                time.comment-time 8:14 am
+                              | -
+                              a.permalink(href='#') Permalink
+                              | -
+                              a.comment-edit-link(href='#')
+                                span.edit Edit
+                            .comment-content.comment-text.comment-body
+                              p Comment Depth 09
+                        li.comment
+                          .comment-wrap
+                            a(href='#', rel='external nofollow')
+                              img.avatar.photo(src='dummy/avatar.jpg', alt='')
+                            .comment-meta
+                              span.comment-author.vcard
+                                cite.fn
+                                  a.url(href='#', rel='external nofollow') John Doe
+                                | -
+                              span.published
+                                time.comment-date March 14, 2013
+                                | at
+                                time.comment-time 8:14 am
+                              | -
+                              a.permalink(href='#') Permalink
+                              | -
+                              a.comment-edit-link(href='#')
+                                span.edit Edit
+                            .comment-content.comment-text.comment-body
+                              p Comment Depth 10
+                              p Also an author comment.
+        li.comment
+          .comment-wrap
+            a(href='#', rel='external nofollow')
+              img.avatar.photo(src='dummy/avatar.jpg', alt='')
+            .comment-meta
+              span.comment-author.vcard
+                cite.fn
+                  a.url(href='#', rel='external nofollow') Jane Doe
+                | -
+              span.published
+                time.comment-date March 14, 2013
+                | at
+                time.comment-time 9:56 am
+              | -
+              a.permalink(href='#') Permalink
+              | -
+              a.comment-edit-link(href='#')
+                span.edit Edit
+              | -
+              a.comment-reply-link(href='#') Reply
+            .comment-content.comment-text.comment-body
+              p Image comment.
+        li.comment
+          .comment-wrap
+            a(href='#', rel='external nofollow')
+              img.avatar.photo(src='dummy/avatar.jpg', alt='')
+            .comment-meta
+              span.comment-author.vcard
+                cite.fn
+                  a.url(href='#', rel='external nofollow') John Doe
+                | -
+              span.published
+                time.comment-date March 14, 2013
+                | at
+                time.comment-time 11:23 am
+              | -
+              a.permalink(href='#') Permalink
+              | -
+              a.comment-edit-link(href='#')
+                span.edit Edit
+              | -
+              a.comment-reply-link(href='#') Reply
+            .comment-content.comment-text.comment-body
+              p We are totally going to blog about these tests!
+        li.comment
+          .comment-wrap
+            a(href='#', rel='external nofollow')
+              img.avatar.photo(src='dummy/avatar.jpg', alt='')
+            .comment-meta
+              span.comment-author.vcard
+                cite.fn
+                  a.url(href='#', rel='external nofollow') John Doe
+                | -
+              span.published
+                time.comment-date March 14, 2013
+                | at
+                time.comment-time 11:27 am
+              | -
+              a.permalink(href='#') Permalink
+              | -
+              a.comment-edit-link(href='#')
+                span.edit Edit
+              | -
+              a.comment-reply-link(href='#') Reply
+            .comment-content.comment-text.comment-body
+              p We use these tests all the time! Killer stuff!
+        li.comment
+          .comment-wrap
+            a(href='#', rel='external nofollow')
+              img.avatar.photo(src='dummy/avatar.jpg', alt='')
+            .comment-meta
+              span.comment-author.vcard
+                cite.fn
+                  a.url(href='#', rel='external nofollow') Jane Doe
+                | -
+              span.published
+                time.comment-date March 14, 2013
+                | at
+                time.comment-time 11:30 am
+              | -
+              a.permalink(href='#') Permalink
+              | -
+              a.comment-edit-link(href='#')
+                span.edit Edit
+              | -
+              a.comment-reply-link(href='#') Reply
+            .comment-content.comment-text.comment-body
+              p Thanks for all the comments, everyone!
+      // End ol.commentlist
+      +nl
+    // End #comments.comments
+    +nl
+
+    // form if Logout
+    #respond.comment-respond
+      h3#reply-title.comment-reply-title
+        | Leave a Reply
+        small
+          a#cancel-comment-reply-link(href='#', rel='nofollow', style='display:none;') Click here to cancel reply.
+      form#commentform.comment-form(action='#', method='post')
+        p.log-in-out
+          | Logged in as
+          a(href='#') indaam
+          | .
+          a(href='#') Log out &raquo;
+        p.comment-form-comment
+          label(for='comment') Comment
+          textarea#comment.input-text(name='comment', cols='45', rows='8', aria-required='true')
+        p.form-submit
+          input#button(type='submit', name='submit', value='Post Comment')
+          input#comment_post_ID(type='hidden', name='', value='')
+          input#comment_parent(type='hidden', name='', value='0')
+        input#_wp_unfiltered_html_comment_disabled(type='hidden', name='', value='')
+    // End #respond.comment-respond
+    +nl
+
+    // form if Login
+    #respond.comment-respond
+      h3#reply-title.comment-reply-title
+        | Leave a Reply
+        small
+          a#cancel-comment-reply-link(rel='nofollow', href='#', style='display:none;') Click here to cancel reply.
+      form#commentform.comment-form(action='#', method='post')
+        p.comment-form-author
+          label(for='author') Name
+            span.required *
+          input#author.input-text(type='text', name='author', value='', size='30', aria-required='true', placeholder='')
+          //- input#author.input-text(type='text', name='author', value='', size='30', aria-required='true', placeholder='Name')
+        p.comment-form-email
+          label(for='email') Email
+            span.required *
+          input#email.input-text(type='text', name='email', value='', size='30', aria-required='true', placeholder='')
+          //- input#email.input-text(type='text', name='email', value='', size='30', aria-required='true', placeholder='Email')
+        p.comment-form-url
+          label(for='url') Website
+          input#url.input-text(type='text', name='url', value='', size='30', placeholder='Website(optional)')
+          //- input#url.input-text(type='text', name='url', value='', size='30', placeholder='Website(optional)')
+        p.comment-form-comment
+          label(for='comment') Comment
+          textarea#comment.input-text(name='comment', cols='45', rows='8', aria-required='true')
+        p.form-submit
+          input#button(type='submit', name='submit', value='Post Comment')
+          input#comment_post_ID(type='hidden', name='', value='')
+          input#comment_parent(type='hidden', name='', value='0')
+    // End #respond.comment-respond
+    +nl
+  // End .comments-wrap
+  +nl
+// End #comments-template
++nl

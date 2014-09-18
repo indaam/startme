@@ -1,0 +1,114 @@
+include asset/mixin
++head("home 1", "http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Raleway:400,300,500,600,800,700,900")
+
+body
+
+  +ie_notice
+  #page
+    header#page-header.header-one(role='banner')
+      nav#top-nav
+        .container
+          include element/nav-mini
+          include element/nav-account
+      // End #top-nav
+
+      #header
+        .container
+          include element/header-title
+          include element/navbar
+      // End #header
+
+    include element/learn/featured
+
+    section#page-content
+
+      main#page-main.page-main(role="main")
+        #content
+
+          .home-page.home-page-1
+
+            // intro
+            include element/learn/intro
+
+            // banner
+            include element/learn/banner
+
+            // featured-products
+            section.products-wrap.featured-products.cl
+              .container
+                  h2.title-section
+                    span featured Product
+                  ul.wrap-item-list.products.set-4-col
+                    +product_view("")
+                    +product_view("")
+                    +product_view("")
+                    +product_view("")
+
+            // products-slider
+            section.products-wrap.products-slider.cl
+              .container
+                h2.title-section
+                  span Recent Product
+                ul.wrap-item-list.products.set-4-col.use-slider
+                  +product_view("")
+                  +product_view("")
+                  +product_view("")
+                  +product_view("")
+                  +product_view("")
+                  +product_view("")
+                  +product_view("")
+                  +product_view("")
+                  +product_view("")
+                  +product_view("")
+                  +product_view("")
+                  +product_view("")
+                  +product_view("")
+                  +product_view("")
+                  +product_view("")
+                  +product_view("")
+            
+            // home-features
+            section.home-features.cl
+              .container
+                include element/feature-testimonial
+                include element/feature-subscribe
+
+            // filter-product
+            section.products-wrap.filter-product.cl
+              .container
+                h2.title-section
+                  span Filter Products
+                ul.button-filter.add-clearfix.reset-list
+                  li.active(data-value='all')
+                    a(href='#') All
+                  li(data-value='tsirt')
+                    a(href='#') t-sirt
+                  li(data-value='jeans')
+                    a(href='#') Jeans
+                  li(data-value='bags')
+                    a(href='#') Bags
+                ul.wrap-item-list.products.set-6-col
+                  +product_view("tsirt")
+                  +product_view("bags")
+                  +product_view("jeans")
+                  +product_view("tsirt")
+                  +product_view("tsirt")
+                  +product_view("tsirt")
+                  +product_view("jeans")
+                  +product_view("tsirt")
+                  +product_view("bags")
+                  +product_view("jeans")
+                  +product_view("tsirt")
+                  +product_view("bags")
+
+      // Theme features
+      include element/theme-features
+      // widget bottom
+      include element/widget-bottom
+      // Brand
+      include element/learn/brand
+      // Footer
+      include element/footer
+
+  +add_js
++end

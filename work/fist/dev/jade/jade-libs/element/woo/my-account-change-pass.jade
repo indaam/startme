@@ -1,0 +1,16 @@
+.hentry
+  .woocommerce
+    form(action='#', method='post')
+      p.form-row.form-row-first
+        label(for='password_1')
+          | New password
+          span.required *
+        input#password_1.input-text(type='password', name='password_1')
+      p.form-row.form-row-last
+        label(for='password_2')
+          | Re-enter new password
+          span.required *
+        input#password_2.input-text(type='password', name='password_2')
+      .clear
+      p
+        input.button(type='submit', name='change_password', value='Save')

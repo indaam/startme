@@ -1,0 +1,1 @@
+!important: The last extention file must be min.js

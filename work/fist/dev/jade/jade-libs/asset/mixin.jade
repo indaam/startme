@@ -1,0 +1,1826 @@
+mixin nl
+  // . 
+
+mixin t(text)
+  h1.test-title #{text}
+
+mixin head(title, font)
+  <!DOCTYPE html>
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8 ie-7"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9 ie-8"> <![endif]-->
+  <!--[if IE 9]>         <html class="no-js ie-9"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0')
+    title=title
+
+    link(rel='stylesheet', href=font, type='text/css', media='all')
+    // js load for develoment 
+    script(type='text/javascript', src='js/jquery/jquery.js')
+    //- script(src='asset/js/widgets.js')
+    script(src='http://localhost:35729/livereload.js')
+    +nl
+
+    // CSS load for develoment
+    //- link(rel='stylesheet', href='asset/css/widgets.css', type='text/css', media='all')
+    //- link(rel='stylesheet', href='asset/tokokoo/gallery.css', type='text/css', media='all')
+    //- link(rel='stylesheet', href='asset/tokokoo/shortcodes.css', type='text/css', media='all')
+    //- link(rel='stylesheet', href='asset/tokokoo/twitter.css', type='text/css', media='all')
+    //- link(rel='stylesheet', href='asset/plugins/captcha.css', type='text/css', media='all')
+    link(rel='stylesheet', href='asset/plugins/ninja-forms-display.css', type='text/css', media='all')
+    //- link(rel='stylesheet', href='asset/plugins/yith-woocommerce-wishlists.css', type='text/css', media='all')
+    //- link(rel='stylesheet', href='asset/plugins/yith_wcas_ajax_search.css', type='text/css', media='all')
+    // End develoment
+    +nl
+
+    // CSS 
+    link(rel='stylesheet', href='style.css', type='text/css', media='all')
+    link(rel='stylesheet', href='screen.css', type='text/css', media='all')
+  +nl
+
+mixin header_logo
+  h1#site-logo
+    a(href='#')
+      img(src='img/logo/logo1.png', alt='')
+  // End #site-logo
+  +nl
+
+
+mixin header_logo2
+  h1#site-logo
+    a(href='#')
+      img(src='img/logo/logo2.png', alt='')
+  // End #site-logo
+  +nl
+
+mixin header_text
+  h1#site-title
+    a(href='#') Just site title
+  p#site-description
+   | next inspiration themes
+  // End #site-title 
+  +nl
+
+mixin typo_test
+  p
+    | This is a sticky post. There are a few things to verify: The sticky post should be distinctly recognizable in some way in comparison to normal posts. You can style the .sticky class if you are using the post_class() function to generate your post classes, which is a best practice. They should show at the very top
+  h2 Headings
+  h1 Header one
+  h2 Header two
+  h3 Header three
+  h4 Header four
+  h5 Header five
+  h6 Header six
+  h2 Blockquotes
+  p Single line blockquote:
+  blockquote
+    p Stay hungry. Stay foolish.
+  p Multi line blockquote with a cite reference:
+  blockquote
+    p
+      | People think focus means saying yes to the thing you&rsquo;ve got to focus on. But that&rsquo;s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I&rsquo;m actually as proud of the things we haven&rsquo;t done as the things I have done. Innovation is saying no to 1,000 things.
+      cite Steve Jobs &ndash; Apple Worldwide Developers&rsquo; Conference, 1997
+  h2 Tables
+  table
+    tbody
+      tr
+        th Employee
+        th.views Salary
+        th
+      tr.odd
+        td
+          a(rel='nofollow', href='#') John Saddington
+        td $1
+        td Because that&rsquo;s all Steve Job&rsquo; needed for a salary.
+      tr.even
+        td
+          a(rel='nofollow', href='#') Tom McFarlin
+        td $100K
+        td For all the blogging he does.
+      tr.odd
+        td
+          a(rel='nofollow', href='#') Jared Erickson
+        td $100M
+        td Pictures are worth a thousand words, right? So Tom x 1,000.
+      tr.even
+        td
+          a(rel='nofollow', href='#') Chris Ames
+        td $100B
+        td With hair like that?! Enough said&hellip;
+  h2 Definition Lists
+  dl
+    dt Definition List Title
+    dd Definition list division.
+    dt Startup
+    dd
+      | A startup company or startup is a company or temporary organization designed to search for a repeatable and scalable business model.
+    dt #dowork
+    dd
+      | Coined by Rob Dyrdek and his personal body guard Christopher &ldquo;Big Black&rdquo; Boykins, &ldquo;Do Work&rdquo; works as a self motivator, to motivating your friends.
+    dt Do It Live
+    dd
+      | I&rsquo;ll let Bill O&rsquo;Reilly will
+      a(rel='nofollow', href='#') explain
+      | this one.
+  h2 Unordered Lists (Nested)
+  ul
+    li
+      | List item one
+      ul
+        li
+          | List item one
+          ul
+            li List item one
+            li List item two
+            li List item three
+            li List item four
+        li List item two
+        li List item three
+        li List item four
+    li List item two
+    li List item three
+    li List item four
+  h2 Ordered List (Nested)
+  ol
+    li
+      | List item one
+      ol
+        li
+          | List item one
+          ol
+            li List item one
+            li List item two
+            li List item three
+            li List item four
+        li List item two
+        li List item three
+        li List item four
+    li List item two
+    li List item three
+    li List item four
+  h2 HTML Tags
+  p
+    | These supported tags come from the WordPress.com code
+    a(rel='nofollow', href='#') FAQ
+    | .
+  p
+    strong Address Tag
+  address
+    | 1 Infinite Loop
+    br
+    | Cupertino, CA 95014
+    br
+    | United States
+  p
+    strong Anchor Tag (aka. Link)
+  p
+    | This is an example of a
+    a(rel='nofollow', href='#') link
+    | .
+  p
+    strong Abbreviation Tag
+  p
+    | The abbreviation
+    abbr srsly
+    | stands for &ldquo;seriously&rdquo;.
+  p
+    strong Acronym Tag
+  p
+    | The acronym
+    acronym ftw
+    | stands for &ldquo;for the win&rdquo;.
+  p
+    strong Big Tag
+  p
+    | These tests are a
+    big big
+    | deal, but this tag is no longer supported in HTML5.
+  p
+    strong Cite Tag
+  p
+    | &ldquo;Code is poetry.&rdquo; &ndash;
+    cite Automattic
+  p
+    strong Code Tag
+  p
+    | You will learn later on in these tests that
+    code word-wrap: break-word;
+    | will be your best friend.
+  p
+    strong Delete Tag
+  p
+    | This tag will let you
+    del strikeout text
+    | , but this tag is no longer supported in HTML5 (use the
+    code strike
+    strike lorem
+    | instead).
+  p
+    strong Emphasize Tag
+  p
+    | The emphasize tag should
+    em italicize
+    | text.
+  p
+    strong Insert Tag
+  p
+    | This tag should denote
+    ins inserted
+    | text.
+  p
+    strong Keyboard Tag
+  p
+    | This scarcely known tag emulates
+    kbd keyboard text
+    | , which is usually styled like the
+    code code
+    | tag.
+  p
+    strong Preformatted Tag
+  p This tag styles large blocks of code.
+  pre.
+    \n.post-title {
+        margin: 0 0 5px;
+        font-weight: bold;
+        font-size: 38px;
+        line-height: 1.2;
+        }                    
+  p
+    strong Quote Tag
+  p
+    q Developers, developers, developers&hellip;
+    | &ndash;Steve Ballmer
+  p
+    strong Strong Tag
+  p
+    | This tag shows
+    strong bold
+    strong  text.
+  p
+    strong Subscript Tag
+  p
+    | Getting our science styling on with H
+    sub 2
+    | O, which should push the &ldquo;2&Prime; down.
+  p
+    strong Superscript Tag
+  p
+    | Still sticking with science and Isaac Newton&rsquo;s E = MC
+    sup 2
+    | , which should lift the 2 up.
+  p
+    strong Teletype Tag
+  p
+    | This rarely used tag emulates
+    tt teletype text
+    | , which is usually styled like the
+    code
+        'code'
+    | tag.
+  p
+    strong Variable Tag
+  p
+    | This allows you to denote
+    var variables
+    | .
+
+mixin searcform
+  .wrap-search
+    // Defauult Search 
+    form#searchform(role='search')
+      div
+        label.screen-reader-text(for='s') Search for:
+        input#s(type='text', value='', placeholder='Search for products')
+        input#searchsubmit(type='submit', value='Search')
+        input(type='hidden', value='')
+    // Serch If use yith ajaxsearchform
+    .yith-ajaxsearchform-container
+      form#yith-ajaxsearchform(role='search')
+        div
+          label.assistive-text(for='s') Search
+          input#yith-s.field.txt(type='search', style='background-color: transparent; background-position: initial initial; background-repeat: initial initial;', autocomplete='off', placeholder='Search for products', value='')
+          input(type='hidden', value='')
+      .autocomplete-suggestions(style='position: absolute; max-height: 300px; z-index: 9999; width: 145px;')
+        .autocomplete-suggestion(data-index='0')
+          strong Woo
+          | Album #1
+        .autocomplete-suggestion(data-index='1')
+          strong Woo
+          | Album #2
+        .autocomplete-suggestion(data-index='2')
+          strong Woo
+          | Album #3
+  // End .wrap-search
+  +nl
+
+mixin searcform2
+  .search-wrap
+    // Defauult Search 
+    form#searchform(role='search')
+      div
+        label.screen-reader-text(for='s') Search for:
+        input#s(type='text', value='', placeholder='Search for products')
+        input#searchsubmit(type='submit', value='Search')
+        input(type='hidden', value='')
+    // Serch If use yith ajaxsearchform
+    .yith-ajaxsearchform-container
+      form#yith-ajaxsearchform(role='search')
+        div
+          label.assistive-text(for='s') Search
+          input#yith-s.field.txt(type='search', style='background-color: transparent; background-position: initial initial; background-repeat: initial initial;', autocomplete='off', placeholder='Search for products', value='')
+          input(type='hidden', value='')
+      .autocomplete-suggestions(style='position: absolute; max-height: 300px; z-index: 9999; width: 145px;')
+        .autocomplete-suggestion(data-index='0')
+          strong Woo
+          | Album #1
+        .autocomplete-suggestion(data-index='1')
+          strong Woo
+          | Album #2
+        .autocomplete-suggestion(data-index='2')
+          strong Woo
+          | Album #3
+  // End .wrap-search
+  +nl
+
+mixin post_author
+  aside.post-author
+    h4.title About Anggi Krisna
+    .author-box
+      img.avatar.photo(src='dummy/avatar.jpg', alt='')
+      p.author-desc.author.vcard
+        a.author-name.url.fn.n(rel='author', href='#')
+          | Chris Ames
+        | Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+  // End .post-author
+  +nl
+
+mixin primary_menu
+  nav#access.site-navigation.primary-navigation(role='navigation')
+      ul
+        li.home
+          a(href="#") home
+        li.use-mega-menu.six-cols
+          a(href='#') Mega menu
+          ul.sub-menu
+            li
+              a(href='#') ASP Beginner
+              ul.sub-menu
+                li
+                  a(href='#') Professional ASP.NET MVC 3
+                li
+                  a(href='#') ASP.NET 4 24-Hour Trainer
+                li
+                  a(href='#') JavaScript Patterns
+                li
+                  a(href='#') Professional ASP.NET Design Patterns
+                li
+                  a(href='#') ASP.NET 4.0 in Practice
+            li
+              a(href='#') ADVANCE DESIGN
+              ul.sub-menu
+                li
+                  a(href='#') Smashing Book #3 – Redesign The Web
+                li
+                  a(href='#') Web Design in Easy Steps, 5th Edition
+                li
+                  a(href='#') Web Design Confidential
+            li
+              a(href='#') Premium
+              ul.sub-menu
+                li
+                  a(href='#') How to Build a Successful Blog Business
+                li
+                  a(href='#') Building Websites All-in-One For Dummies
+                li
+                  a(href='#') Ninja Silhouette
+                li
+                  a(href='#') Happy Ninja
+            li
+              a(href='#') BEST AUTHOR
+              ul.sub-menu
+                li
+                  a(href='#') Björgvin Benediktsson
+                li
+                  a(href='#') Collis
+                li
+                  a(href='#') Donna Spencer
+                li
+                  a(href='#') Peter Tellone
+                li
+                  a(href='#') Skellie
+        li
+          a(href='#') Blog
+        li
+          a(href='#') Lorem ipsum
+        li
+          a(href='#') dolor sit amet
+          ul.sub-menu
+            li
+              a(href='#') Lorem ipsum
+            li
+              a(href='#') dolor sit amet
+            li
+              a(href='#') consectetur
+            li
+              a(href='#') adipisicing elit
+              ul.sub-menu
+                li
+                  a(href='#') Lorem ipsum
+                li
+                  a(href='#') dolor sit amet
+                li
+                  a(href='#') consectetur
+                li
+                  a(href='#') adipisicing elit
+            li
+              a(href='#') Quae impedit quas
+            li
+              a(href='#') Deserunt
+            li
+              a(href='#') totam
+        li
+          a(href='#') consectetur
+        li
+          a(href='#') adipisicing elit
+          ul.sub-menu
+            li
+              a(href='#') Lorem ipsum
+            li
+              a(href='#') dolor sit amet
+            li
+              a(href='#') consectetur
+            li
+              a(href='#') adipisicing elit
+              ul
+            li
+              a(href='#') Quae impedit quas
+            li
+              a(href='#') Deserunt
+            li
+              a(href='#') totam
+  // End #access.site-navigation.primary-navigation
+  +nl
+
+mixin menu
+  #navbar.navbar
+    nav#site-navigation.navigation.main-navigation(role='navigation')
+      h3.menu-toggle Menu
+      a.screen-reader-text.skip-link(title='Skip to content', href='#') Skip to content
+      .menu-top-header-container
+        ul#menu-top-header.nav-menu
+          li.menu-item.menu-item-has-children
+            a(href='#') Categories
+            ul.sub-menu
+              li.menu-item
+                a(href='#') Post Formats
+              li.menu-item.menu-item-has-children
+                a(href='#') Content
+                ul.sub-menu
+                  li.menu-item.menu-item-has-children
+                    a(href='#') sub-cat
+                    ul.sub-menu
+                      li.menu-item
+                        a(href='#') Alignment
+                      li.menu-item
+                        a(href='#') Uncategorized
+                      li.menu-item
+                        a(href='#') Trackbacks
+                      li.menu-item.menu-item-has-children
+                        a(href='#') Pingbacks
+                        ul.sub-menu
+                          li.menu-item
+                            a(href='#') Alignment
+                          li.menu-item
+                            a(href='#') Uncategorized
+                          li.menu-item
+                            a(href='#') Trackbacks
+                          li.menu-item
+                            a(href='#') Pingbacks
+                          li.menu-item.menu-item-has-children
+                            a(href='#') Corner Case
+                            ul.sub-menu
+                              li.menu-item
+                                a(href='#') Trackbacks
+                              li.menu-item
+                                a(href='#') Titles
+                              li.menu-item.menu-item-has-children
+                                a(href='#') Corner Case
+                                ul.sub-menu
+                                  li.menu-item
+                                    a(href='#') Images
+                                  li.menu-item.menu-item-has-children
+                                    a(href='#') Pingbacks
+                                    ul.sub-menu
+                                      li.menu-item.menu-item-has-children
+                                        a(href='#') Content
+                                        ul.sub-menu
+                                          li.menu-item.menu-item-has-children
+                                            a(href='#') Content
+                                            ul.sub-menu
+                                              li.menu-item.menu-item-has-children
+                                                a(href='#') Comments
+                                                ul.sub-menu
+                                                  li.menu-item.menu-item-has-children
+                                                    a(href='#') Uncategorized
+                                                    ul.sub-menu
+                                                      li.menu-item
+                                                        a(href='#') Post Formats
+                                                      li.menu-item
+                                                        a(href='#') Images
+                                                      li.menu-item
+                                                        a(href='#') Alignment
+                                      li.menu-item
+                                        a(href='#') Images
+                                  li.menu-item
+                                    a(href='#') Comments
+                              li.menu-item
+                                a(href='#') Post Formats
+                          li.menu-item
+                            a(href='#') Titles
+                      li.menu-item
+                        a(href='#') Corner Case
+                      li.menu-item.menu-item-has-children
+                        a(href='#') Titles
+                        ul.sub-menu
+                          li.menu-item.menu-item-has-children
+                            a(href='#') Comments
+                            ul.sub-menu
+                              li.menu-item.menu-item-has-children
+                                a(href='#') Pingbacks
+                                ul.sub-menu
+                                  li.menu-item.menu-item-has-children
+                                    a(href='#') Trackbacks
+                                    ul.sub-menu
+                                      li.menu-item.menu-item-has-children
+                                        a(href='#') Uncategorized
+                                        ul.sub-menu
+                                          li.menu-item.menu-item-has-children
+                                            a(href='#') Corner Case
+                                            ul.sub-menu
+                                              li.menu-item
+                                                a(href='#') Content
+                                              li.menu-item
+                                                a(href='#') Titles
+                                          li.menu-item.menu-item-has-children
+                                            a(href='#') Alignment
+                                            ul.sub-menu
+                                              li.menu-item
+                                                a(href='#') Post Formats
+              li.menu-item
+                a(href='#') Images
+              li.menu-item
+                a(href='#') Comments
+          li.menu-item
+            a(href='#') Sample Page
+          li.menu-item.menu-item-has-children
+            a(href='#') Parent Page
+            ul.sub-menu
+              li.menu-item
+                a(href='#') Child Page 01
+              li.menu-item
+                a(href='#') Child Page 02
+              li.menu-item.menu-item-has-children
+                a(href='#') Child Page 03
+                ul.sub-menu
+                  li.menu-item
+                    a(href='#') Grandchild Page
+              li.menu-item
+                a(href='#') Child Page 04
+              li.menu-item
+                a(href='#') Child Page 05
+          li.menu-item
+            a(href='#') About
+          li.menu-item
+            a(href='#') Page Markup And Formatting
+          li.menu-item
+            a(href='#') Page Image Alignment
+          li.menu-item
+            a(href='#') Page Comments
+          //- li.menu-item
+          //-   a(href='#') Page Comments Disabled
+          //- li.menu-item
+          //-   a(href='#') Blog
+          //- li.menu-item
+          //-   a(href='#') Home
+
+
+mixin footer_menu
+  nav(class="site-navigation footer-menu subsidiary-navigation", role="navigation")
+    ul
+      each subsidiary, index in ['home', 'Products', 'cart', 'blog', 'Archive', 'contact']
+        li
+          a(href="#")
+            | #{subsidiary}
+  // End site-navigation footer-menu subsidiary-navigation
+  +nl 
+
+mixin woo_images
+  .images
+    a.woocommerce-main-image.zoom(itemprop='image', href='#')
+      img.attachment-shop_single.wp-post-image(src='http://placehold.it/540x874/d68720/ffffff', alt='')
+    .thumbnails
+      a.zoom.first(href='#')
+        img.attachment-shop_thumbnail(src='http://placehold.it/70x70/d68720/ffffff', alt='')
+      a.zoom(href='#')
+        img.attachment-shop_thumbnail(src='http://placehold.it/70x70/d68720/ffffff', alt='')
+      a.zoom.last(href='#')
+        img.attachment-shop_thumbnail(src='http://placehold.it/70x70/d68720/ffffff', alt='')
+      // End .thumbnails 
+  // End .images
+  +nl
+
+mixin woo_cart_widget
+  .widget.woocommerce.widget_shopping_cart
+    h2.widgettitle Cart
+    .widget_shopping_cart_content
+      ul.cart_list.product_list_widget
+        li
+          a(href='#', title='')
+            img.attachment-shop_thumbnail.wp-post-image(alt='', src='dummy/product-40x40.jpg')
+            | The Smashing Library (60+ Quality eBooks)
+          span.quantity
+            | 2 ×
+            span.amount £99
+        li
+          a(href='#', title='')
+            img.attachment-shop_thumbnail.wp-post-image(alt='', src='dummy/product-40x40.jpg')
+            | Smashing Book #4 (Print, Hardcover, 498 pages, Release: Late Nov 2013)
+          span.quantity
+            | 1 ×
+            span.amount £52
+        li
+          a(href='#', title='')
+            img.attachment-shop_thumbnail.wp-post-image(alt='', src='dummy/product-40x40.jpg')
+            | The Smashing Book #1 (Printed, Softcover + Free eBook)
+          span.quantity
+            | 1 ×
+            span.amount £19.90
+        li
+          a(href='#', title='')
+            img.attachment-shop_thumbnail.wp-post-image(alt='', src='dummy/product-40x40.jpg')
+            | The Mobile Book (Print + eBook) + Addendum (eBook)
+          span.quantity
+            | 1 ×
+            span.amount £49
+      p.total
+        strong Subtotal:
+        span.amount £318.90
+      p.buttons
+        a.button(href='#', title='') View Cart →
+        a.button.checkout(href='#', title='') Checkout →
+  // End .widget.woocommerce.widget_shopping_cart
+  +nl
+
+mixin add_js
+  script(type='text/javascript', src='js/jquery.js')
+  script(type='text/javascript', src='js/plugins.js')
+  //- script(type='text/javascript', src='js/methods.js')
+  script(type='text/javascript', src='js/settings.js')
+  script(type='text/javascript', src='js/main.js')
+  +nl
+
+mixin blog_home_default
+  .blog-home
+    article#post-1241.hentry.post.publish.post-1.odd.author-themedemos.sticky.format-standard.category-uncategorized.post_tag-sticky-2.post_tag-template.instock
+      .entry-meta
+          time.published(datetime='2012-01-07T07:07:21+00:00', title='Saturday, January 7th, 2012, 7:07 am') January 7, 2012
+          span.author.vcard
+            a.url.fn.n(rel='author', href='http://192.168.1.87/indaam/wp/author/themedemos/', title='themedemos') themedemos
+          span.post_tag
+            span.before Tags:
+            a(href='http://192.168.1.87/indaam/wp/tag/sticky-2/', rel='tag') sticky
+            | ,
+            a(href='http://192.168.1.87/indaam/wp/tag/template/', rel='tag') template
+          span.category
+            span.before Posted in:
+            a(href='http://192.168.1.87/indaam/wp/category/uncategorized/', rel='tag') Uncategorized
+        .entry-container
+          header.entry-header
+            h2.entry-title
+              a(href='http://192.168.1.87/indaam/wp/template-sticky/') Template: Sticky
+          .entry-summary
+            p
+              | This is a sticky post. There are a few things to verify: The sticky post should be distinctly recognizable in some way in comparison to normal posts. You can style the .sticky class if you are using the post_class() function to generate your post classes, which is a best practice. They should show at the very top
+  // End .blog-home
+  +nl
+
+mixin blog_home
+  .blog-home
+    article.hentry
+      .entry-container
+        .framebox
+        //
+           End framebox
+        header.entry-header
+          h2.entry-title
+            a(href='#', title='') Template: Sticky
+        .entry-meta
+          time.published(title='Saturday, January 7th, 2012, 7:07 am', datetime='2012-01-07T07:07:21+00:00') January 7, 2012
+          span.author.vcard
+            a.url.fn.n(rel='author', href='#', title='') themedemos
+          span.comments-link
+            a(href='#', title='') one comment
+        .entry-summary
+          p
+            | This is a sticky post. There are a few things to verify: The sticky post should be distinctly recognizable in some way in comparison to normal posts. You can style the .sticky class if you are using the post_class() function to generate your post classes, which is a best practice. They should show at the very top
+          .read-more
+            a(href='#', title='') Continue Reading â†’
+        .entry-meta
+          span.post_tag
+            span.before Tags:
+            a(rel='tag', href='#', title='') sticky
+            | ,
+            a(rel='tag', href='#', title='') template
+          span.category
+            span.before Posted in:
+            a(rel='tag', href='#', title='') sticky
+            | ,
+            a(rel='tag', href='#', title='') template
+    // End .hentry
+    +nl
+
+    article.hentry
+      .entry-container
+        .framebox
+          img(src='dummy/blog-img.jpg', alt='')
+        //
+           End framebox
+        header.entry-header
+          h2.entry-title
+            a(href='#', title='') Template: Sticky
+        .entry-meta
+          time.published(title='Saturday, January 7th, 2012, 7:07 am', datetime='2012-01-07T07:07:21+00:00') January 7, 2012
+          span.author.vcard
+            a.url.fn.n(rel='author', href='#', title='') themedemos
+          span.comments-link
+            a(href='#', title='') one comment
+        .entry-summary
+          p
+            | This is a sticky post. There are a few things to verify: The sticky post should be distinctly recognizable in some way in comparison to normal posts. You can style the .sticky class if you are using the post_class() function to generate your post classes, which is a best practice. They should show at the very top
+          .read-more
+            a(href='#', title='') Continue Reading â†’
+        .entry-meta
+          span.post_tag
+            span.before Tags:
+            a(rel='tag', href='#', title='') sticky
+            | ,
+            a(rel='tag', href='#', title='') template
+          span.category
+            span.before Posted in:
+            a(rel='tag', href='#', title='') sticky
+            | ,
+            a(rel='tag', href='#', title='') template
+    // End .hentry
+    +nl
+
+    article.hentry
+      .entry-container
+        .framebox
+          iframe(width='670', height='380', src='http://www.youtube.com/embed/T2PIz4e09EY')
+        //
+           End framebox
+        header.entry-header
+          h2.entry-title
+            a(href='#', title='') Template: Sticky
+        .entry-meta
+          time.published(title='Saturday, January 7th, 2012, 7:07 am', datetime='2012-01-07T07:07:21+00:00') January 7, 2012
+          span.author.vcard
+            a.url.fn.n(rel='author', href='#', title='') themedemos
+          span.comments-link
+            a(href='#', title='') one comment
+        .entry-summary
+          p
+            | This is a sticky post. There are a few things to verify: The sticky post should be distinctly recognizable in some way in comparison to normal posts. You can style the .sticky class if you are using the post_class() function to generate your post classes, which is a best practice. They should show at the very top
+          .read-more
+            a(href='#', title='') Continue Reading â†’
+        .entry-meta
+          span.post_tag
+            span.before Tags:
+            a(rel='tag', href='#', title='') sticky
+            | ,
+            a(rel='tag', href='#', title='') template
+          span.category
+            span.before Posted in:
+            a(rel='tag', href='#', title='') sticky
+            | ,
+            a(rel='tag', href='#', title='') template
+    // End .hentry
+    +nl
+
+  // End .blog-home
+  +nl
+
+mixin pagination
+  nav.pagination
+    a.prev.page-numbers(href='#')
+      span.meta-nav ←
+      | Previous
+    a.page-numbers(href='#') 1
+    span.page-numbers.current 2
+    a.page-numbers(href='#') 3
+    a.next.page-numbers(href='#')
+      | Next
+      span.meta-nav →
+  // End .pagination
+  +nl
+
+mixin single_pagination
+  nav.navigation.post-navigation(role='navigation')
+    h1.screen-reader-text Post navigation
+    .nav-links
+      a(rel='prev', href='http://localhost/indaam/wp/template-comments-disabled/')
+        span.meta-nav ←
+        | Template: Comments Disabled
+        span.text-navigation ← Template: Comments Disabled
+      a(rel='next', href='http://localhost/indaam/wp/template-password-protected/')
+        | Template: Password Protected (the password is “enter”)
+        span.meta-nav →
+        span.text-navigation Template: Password Protected (the password is “enter”) →
+    // .post-navigation
+
+mixin tokokoo_archive
+  .latest-archive
+    h3 Latest Posts
+    ul.archive-list
+      li
+        a(href='#') Big Sofa in Interior Lifestyle Living
+      li
+        a(href='#') The room for winding down, living it up or just staying in
+      li
+        a(href='#') SketchChair Kickstarter Campaign
+      li
+        a(href='#') Looking for a comfy place to relax?
+      li
+        a(href='#') Fashion helps me make a lot of money
+      li
+        a(href='#') Love the room you live in
+      li
+        a(href='#') Hello world!
+  // End .latest-archive
+  +nl
+
+  .cat-archive
+    h3 Categories
+    ul.archive-list
+      li.cat-item.cat-item-2
+        a(href='#') Furniture
+      li.cat-item.cat-item-4
+        a(href='#') Meubel
+      li.cat-item.cat-item-1
+        a(href='#') Uncategorized
+  // End .cat-archive
+  +nl
+
+  .month-archive
+    h3 Monthly Archives
+    ul.archive-list
+      li
+        a(href='#') November 2012
+      li
+        a(href='#') August 2011
+      li
+        a(href='#') November 2012
+      li
+        a(href='#') August 2011
+  // End .month-archive
+  +nl
+
+mixin woo_variations_form
+  form.variations_form.cart(method='post', enctype='multipart/form-data', data-product_id='1487', data-product_variations='')
+    table.variations(cellspacing='0')
+        tbody
+          tr
+            td.label
+              label(for='pa_color') Color
+            td.value
+              select#pa_color(name='attribute_pa_color')
+                option(value='') Choose an option…
+                option(value='black') Black
+                option(value='green') Green
+          tr
+            td.label
+              label(for='tinggi') tinggi
+            td.value
+              select#tinggi(name='attribute_tinggi')
+                option(value='') Choose an option…
+                option(value='1km-2km-3km', selected='selected') 1km, 2km, 3km
+              a.reset_variations(href='#reset') Clear selection
+      .single_variation_wrap
+        .single_variation
+          span.price
+              del
+                span.amount Rp35
+              ins
+                span.amount Rp30
+
+        .variations_button
+
+          input(type='hidden', name='variation_id', value='')
+
+          .quantity.buttons_added
+            <input type="button" value="-" class="minus" /><input type="number" title="Qty" value="1" name="quantity" step="1" class="input-text qty text" /><input type="button" value="+" class="plus" />
+
+          button.single_add_to_cart_button.button.alt(type='submit') Add to cart
+      div
+        input(type='hidden', name='product_id', value='1487')
+  // End .variations_form.cart
+  +nl
+
+
+
+mixin all_form_cart
+  .linezz
+
+  div(itemprop='description')
+    p
+      | Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+  form.cart(enctype='multipart/form-data', method='post')
+    .quantity.buttons_added
+      input.minus(type='button', value='-')
+      input.input-text.qty.text(type='number', title='Qty', value='1', name='quantity', min='1', step='1')
+      input.plus(type='button', value='+')
+    input(type='hidden', value='50', name='add-to-cart')
+    button.single_add_to_cart_button.button.alt(type='submit') Add to cart
+
+  .product_meta
+    span.sku_wrapper(itemprop='productID')
+      | SKU:
+      span.sku 9458KS
+      | .
+    span.posted_in
+      | Categories:
+      a(rel='tag', href='http://tokokoo.com/demo/joglo/product-category/apartment/') Apartment
+      | ,
+      a(rel='tag', href='http://tokokoo.com/demo/joglo/product-category/cottage/') Cottage
+      | ,
+      a(rel='tag', href='http://tokokoo.com/demo/joglo/product-category/single-home/') Single Home
+      | ,
+      a(rel='tag', href='http://tokokoo.com/demo/joglo/product-category/villa/') Villa
+      | .
+    span.tagged_as
+      | Tags:
+      a(rel='tag', href='http://tokokoo.com/demo/joglo/product-tag/area/') area
+      | ,
+      a(rel='tag', href='http://tokokoo.com/demo/joglo/product-tag/building/') building
+      | ,
+      a(rel='tag', href='http://tokokoo.com/demo/joglo/product-tag/home/') home
+      | ,
+      a(rel='tag', href='http://tokokoo.com/demo/joglo/product-tag/house/') house
+      | ,
+      a(rel='tag', href='http://tokokoo.com/demo/joglo/product-tag/live/') live
+      | ,
+      a(rel='tag', href='http://tokokoo.com/demo/joglo/product-tag/stay/') stay
+      | .
+
+
+
+  .linezz
+
+  div(itemprop='description')
+    p
+      | Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+  form.cart(enctype='multipart/form-data', method='post')
+    .quantity.buttons_added
+      input.minus(type='button', value='-')
+      input.input-text.qty.text(type='number', title='Qty', value='1', name='quantity', min='1', step='1')
+      input.plus(type='button', value='+')
+    input(type='hidden', value='93', name='add-to-cart')
+    button.single_add_to_cart_button.button.alt(type='submit') Add to cart
+  .product_meta
+    span.sku_wrapper(itemprop='productID')
+      | SKU:
+      span.sku 9458KS
+      | .
+    span.posted_in
+      | Categories:
+      a(rel='tag', href='http://tokokoo.com/demo/joglo/product-category/apartment/') Apartment
+      | ,
+      a(rel='tag', href='http://tokokoo.com/demo/joglo/product-category/cottage/') Cottage
+      | ,
+      a(rel='tag', href='http://tokokoo.com/demo/joglo/product-category/single-home/') Single Home
+      | ,
+      a(rel='tag', href='http://tokokoo.com/demo/joglo/product-category/villa/') Villa
+      | .
+    span.tagged_as
+      | Tags:
+      a(rel='tag', href='http://tokokoo.com/demo/joglo/product-tag/area/') area
+      | ,
+      a(rel='tag', href='http://tokokoo.com/demo/joglo/product-tag/building/') building
+      | ,
+      a(rel='tag', href='http://tokokoo.com/demo/joglo/product-tag/home/') home
+      | ,
+      a(rel='tag', href='http://tokokoo.com/demo/joglo/product-tag/house/') house
+      | ,
+      a(rel='tag', href='http://tokokoo.com/demo/joglo/product-tag/live/') live
+      | ,
+      a(rel='tag', href='http://tokokoo.com/demo/joglo/product-tag/stay/') stay
+      | .
+
+  .linezz
+
+
+  div(itemprop='description')
+    p
+      | Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+  form.variations_form.cart(data-product_id='99', enctype='multipart/form-data', method='post')
+    table.variations(cellspacing='0')
+      tbody
+        tr
+          td.label
+            label(for='type') Type
+          td.value
+            select#type(name='attribute_type')
+              option(value='') Choose an option…
+              option.active(value='36m2') 36m2
+              option.active(value='45m2') 45m2
+              option.active(value='48m2') 48m2
+            a.reset_variations(href='#reset', style='visibility: visible; display: block;') Clear selection
+    .single_variation_wrap(style='')
+      .single_variation
+        span.price
+          span.amount £150,000
+        p.stock 5 in stock
+      .variations_button
+        input(type='hidden', value='1780', name='variation_id')
+        .quantity.buttons_added
+          input.minus(type='button', value='-')
+          input.input-text.qty.text(type='number', title='Qty', value='1', name='quantity', step='1', min='1', max='5')
+          input.plus(type='button', value='+')
+        button.single_add_to_cart_button.button.alt(type='submit') Add to cart
+    div
+      input(type='hidden', value='99', name='add-to-cart')
+      input(type='hidden', value='99', name='product_id')
+  .product_meta
+    span.sku_wrapper(itemprop='productID')
+      | SKU:
+      span.sku(data-o_sku='02374OS') 02375OS
+      | .
+    span.posted_in
+      | Categories:
+      a(rel='tag', href='http://tokokoo.com/demo/joglo/product-category/apartment/') Apartment
+      | ,
+      a(rel='tag', href='http://tokokoo.com/demo/joglo/product-category/building-area/') Building Area
+      | ,
+      a(rel='tag', href='http://tokokoo.com/demo/joglo/product-category/condo/') Condo
+      | ,
+      a(rel='tag', href='http://tokokoo.com/demo/joglo/product-category/single-home/') Single Home
+      | .
+    span.tagged_as
+      | Tags:
+      a(rel='tag', href='http://tokokoo.com/demo/joglo/product-tag/area/') area
+      | ,
+      a(rel='tag', href='http://tokokoo.com/demo/joglo/product-tag/building/') building
+      | ,
+      a(rel='tag', href='http://tokokoo.com/demo/joglo/product-tag/home/') home
+      | ,
+      a(rel='tag', href='http://tokokoo.com/demo/joglo/product-tag/house/') house
+      | ,
+      a(rel='tag', href='http://tokokoo.com/demo/joglo/product-tag/live/') live
+      | ,
+      a(rel='tag', href='http://tokokoo.com/demo/joglo/product-tag/stay/') stay
+      | .
+
+
+mixin product_meta
+  .product_meta
+    span.sku_wrapper(itemprop='productID') SKU:
+      span.sku ini sku
+
+    span.posted_in
+        | Categories:
+        a(rel='tag', href='#') Albums
+        | ,
+        a(rel='tag', href='#') Clothing
+        | ,
+        a(rel='tag', href='#') Hoodies
+        | ,
+        a(rel='tag', href='#') Singles
+        | ,
+        a(rel='tag', href='#') T-shirts
+
+    span.tagged_as
+      | Tags:
+      a(rel='tag', href='#') bags
+      | ,
+      a(rel='tag', href='#') bikini
+      | ,
+      a(rel='tag', href='#') jeans
+      | ,
+      a(rel='tag', href='#') other
+      | ,
+      a(rel='tag', href='#') t-shirt
+  // End .product_meta
+  +nl
+
+mixin woo_tabs
+  .woocommerce-tabs
+    ul.tabs
+        li.description_tab.active
+          a(href='#tab-description') Description
+        li.additional_information_tab
+          a(href='#tab-additional_information') Additional Information
+        li.reviews_tab
+          a(href='#tab-reviews') Reviews (3)
+
+    #tab-description.panel.entry-content(style='display: block;')
+      h2 Product Description
+      p
+        | Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Maurisplacerat
+        | eleifend leo.
+
+    #tab-additional_information.panel.entry-content(style='display: block;')
+      h2 Additional Information
+      table.shop_attributes
+        tbody
+          tr.
+            th Size
+            td
+              p Small, Medium, Large
+          tr.alt
+            th Color
+            td
+              p Black, Blue, Green, Orange, Red, White, Yellow
+          tr.
+            th Capacity
+            td
+              p 125ml, 200ml, 350ml
+
+    #tab-reviews.panel.entry-content(style='display: block;')
+      #reviews
+        #comments
+          div(itemprop='aggregateRating', itemscope='', itemtype='http://schema.org/AggregateRating')
+            .star-rating(title='Rated 3.33 out of 5')
+              span(style='width: 66.6%;')
+                strong.rating(itemprop='ratingValue') 3.33
+                | out of 5
+            h2
+              span.count(itemprop='ratingCount') 3
+              | reviews for Lorem ipsum dolor sit.
+          ol.commentlist
+            li.comment
+              .comment_container
+                img.avatar(width='40', height='40', alt='', src='dummy/avatar.png')
+                .comment-text
+                  p.meta
+                    strong Eric
+                    | .
+                    time(datetime='2013-06-07T11:52:25+00:00') June 7, 2013
+                    | .
+                    a.reply-comment(href='#') reply
+                  .description
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing.
+                  .clear
+                .clear
+            li.comment
+              .comment_container
+                img.avatar(width='40', height='40', alt='', src='dummy/avatar.png')
+                .comment-text
+                  p.meta
+                    strong Anggi
+                    | -
+                    time(datetime='2013-06-07T11:56:36+00:00') June 7, 2013
+                    | .
+                    a.reply-comment(href='#') reply
+                  .description
+                    p
+                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, inventore deleniti aliquid fugiat sed consequatur adipisci dicta. Velit, magni, debitis, consectetur, natus sint voluptatem perferendis quas aperiam non quo quidem accusamus quis. Voluptatum, odio inventore minima ad voluptatem soluta amet.
+                  .clear
+                .clear
+            li.comment
+              .comment_container
+                img.avatar(width='40', height='40', alt='', src='dummy/avatar.png')
+                .comment-text
+                  p.meta
+                    strong Satrya
+                    | -
+                    time(datetime='2013-06-07T12:19:25+00:00') June 7, 2013
+                    | .
+                    a.reply-comment(href='#') reply
+                  .description
+                    p
+                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, dolor numquam magnam nemo corporis at!
+                  .clear
+                .clear
+            li.comment
+              .comment_container
+                img.avatar(width='40', height='40', alt='', src='dummy/avatar.png')
+                .comment-text
+                  p.meta
+                    strong Pratama
+                    | -
+                    time(datetime='2013-06-07T12:59:49+00:00') June 7, 2013
+                    | .
+                    a.reply-comment(href='#') reply
+                  .description
+                    p
+                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, optio illum est repellendus dicta blanditiis similique consequatur cumque adipisci fugiat. Eveniet, tempora, corporis magni natus repellat voluptatibus deserunt doloribus hic vero omnis fugiat fuga ipsum? Quae, asperiores et provident facere impedit eligendi modi illo voluptas hic aliquam quos accusamus distinctio sit blanditiis architecto minima harum reprehenderit. Maiores, totam, sint debitis placeat labore minus temporibus autem cupiditate doloremque iste dicta enim non pariatur laudantium quia impedit nobis sunt dolor obcaecati necessitatibus expedita magni eius ratione atque architecto a modi. Iste, odit!
+                  .clear
+                .clear
+          p.add_review
+            a.inline.show_review_form.button(title='Add Your Review', href='#') Add Review
+        #review_form_wrapper(style='display: none;')
+          #review_form
+            #respond
+              h3#reply-title
+                | Add a review
+                small
+                  a#cancel-comment-reply-link(rel='nofollow', style='display: block;', href='#') Cancel reply
+              form#commentform(action='#', method='post')
+                p.comment-form-author
+                  label(for='author') Name
+                  span.required *
+                  input#author(type='text', name='author', value='', size='30', aria-required='true')
+                p.comment-form-email
+                  label(for='email') Email
+                  span.required *
+                  input#email(type='text', name='email', value='', size='30', aria-required='true')
+                p.comment-form-rating
+                  label(for='rating') Rating
+                p.stars
+                  span
+                    a.star-1(href='#') 1
+                    a.star-2(href='#') 2
+                    a.star-3(href='#') 3
+                    a.star-4(href='#') 4
+                    a.star-5(href='#') 5
+                select#rating(style='display: none;', name='rating')
+                  option(value='') Rate…
+                  option(value='5') Perfect
+                  option(value='4') Good
+                  option(value='3') Average
+                  option(value='2') Not that bad
+                  option(value='1') Very Poor
+                p
+                p.comment-form-comment
+                  label(for='comment') Your Review
+                  textarea#comment(name='comment', cols='45', rows='8', aria-required='true')
+                input#_n(type='hidden', name='', value='')
+                input(type='hidden', name='', value='')
+                p.form-submit
+                  input#submit(type='submit', name='submit', value='Submit Review')
+                  input#comment_post_ID(type='hidden', name='', value='')
+                  input#comment_parent(type='hidden', name='', value='')
+        .clear
+
+mixin woo_resul_count
+  p.woocommerce-result-count Showing 1–10 of 23 results
+  // End .woocommerce-result-count
+  +nl
+
+mixin woo_ordering_ul
+  form.woocommerce-ordering(method='get')
+    ul
+      li
+        a(href='#') Default sorting
+      li.selected
+        a(href='#') Popularity
+      li
+        a(href='#') Rating
+      li
+        a(href='#') Newness
+      li
+        a(href='#') Price
+  // End .woocommerce-ordering
+  +nl
+
+mixin woo_ordering
+  form.woocommerce-ordering(method='get')
+    select.orderby(name='orderby')
+      option(value='menu_order') Default sorting
+      option(value='popularity') Sort by popularity
+      option(value='rating') Sort by average rating
+      option(value='date') Sort by newness
+      option(value='price') Sort by price: low to high
+      option(value='price-desc') Sort by price: high to low
+  // End .woocommerce-ordering
+  +nl
+
+mixin woo_message_error
+  ul.woocommerce-error
+    li Please enter your password.
+    li Passwords do not match.
+
+mixin woo_message
+  .woocommerce-message
+      a.button(href='http://localhost/indaam/wp/cart/')
+          | View Cart →
+      | "Premium Quality" was successfully added to your cart.
+  // End .woocommerce-message
+  +nl
+
+mixin woo_star_rating
+  .star-rating(title='Rated 4.50 out of 5')
+    span(style='width: 90%;')
+        strong.rating 4.50
+        | out of 5
+  // End .star-rating
+  +nl
+
+mixin woo_price
+  span.price
+    span.form from
+    del
+      span.amount £3
+    ins
+      span.amount £2
+  // End .price
+  +nl
+
+mixin woo_single_price
+  div(itemtype='http://schema.org/Offer', itemscope='', itemprop='offers')
+    p.price(itemprop='price')
+        span.from From: 
+        del
+          span.amount Rp35
+        ins
+          span.amount Rp30
+      meta(content='IDR', itemprop='priceCurrency')
+      link(href='http://schema.org/InStock', itemprop='availability')
+    // End .price
+  // End div
+  +nl
+
+mixin woo_onsale
+  span.onsale Sale!
+  +nl
+
+mixin woo_title_product(woo_title_product_text)
+  h3.title-product
+    a(href="#", title="title of product") #{woo_title_product_text}
+  // End .title-product
+  +nl
+
+mixin woo_title_product_single(woo_title_product_single_text)
+  h1.product_title.entry-title(itemprop='name')
+    | #{woo_title_product_single_text}
+  +nl
+
+mixin woo_button
+  a.button.view-product(href='#') View Detail
+  a.add_to_cart_button.button.product_type_simple(href='#') Add to cart
+  a.add_to_cart_button.button.product_type_simple.loading(href='#') Add to cart
+  a.add_to_cart_button.button.product_type_simple.added(href='#') Add to cart
+  a.button.product_type_variable Select options
+  a.added_to_cart view cart
+  // End button
+  +nl
+
+mixin new_social
+  div.new-social-wrap
+    each social, index in ['facebook', 'twitter', 'rss', 'youtube']
+      a(href="#", class="new-social new-" + social, title="follow on" + social)
+          | #{social}
+  // End .new-social-wrap
+  +nl
+
+mixin woo_summary(woo_summary_text)
+  .summary.entry-summary
+    div(itemprop='description')
+      p #{woo_summary_text} lorem ipsum
+  // End .summary.entry-summary
+  +nl
+
+mixin main_title(main_title_text)
+  h1.main-title
+    span #{main_title_text}
+
+mixin related_products
+  .related.products
+    h2 related products
+
+    ul.products.item-wrap
+      // List Product here
+    // End .products
+  // End .related.products
+
+mixin upsells_products
+  .upsells.products
+    h2 You may also like...
+
+    ul.products.item-wrap
+      // List Product here
+    // End .products
+  // End .upsells.products
+
+mixin page_title(page_title_text)
+  .page-title
+    span #{page_title_text}
+  +nl
+
+mixin end
+  </html>
+
+mixin entry_meta_time
+  time.published(datetime='2012-01-07T07:07:21+00:00', title='Saturday, January 7th, 2012, 7:07 am') January 7, 2012
+  +nl
+
+mixin entry_meta_tag
+  span.post_tag
+    span.before Tags:
+    a(href='#', rel='tag') sticky
+    | ,
+    a(href='#', rel='tag') template
+  +nl
+
+mixin entry_meta_category
+  span.before Posted in:
+  a(href='#', rel='tag') Uncategorized
+  +nl
+
+mixin entry_meta_author
+  span.author.vcard
+    a.url.fn.n(rel='author', href='#', title='themedemos') themedemos
+  +nl
+
+mixin entry_summary(entry_summary_text)
+  .entry-summary
+    p #{entry_summary_text} text
+  // End .entry-summary
+  +nl
+
+mixin entry_title(entry_title_text)
+  h2.entry-title
+    a(href='#') #{entry_title_text} text
+  +nl
+
+mixin comment_link
+  span.comments-link
+    a(href="#") one comment
+  +nl
+
+mixin ie_notice
+  //if lt IE 7
+    p.chromeframe
+      | You are using an
+      strong outdated
+      | browser. Please
+      a(href='http://browsehappy.com/') upgrade your browser
+      | or
+      a(href='http://www.google.com/chromeframe/?redirect=true') activate Google Chrome Frame
+      | to improve your experience.
+
+mixin whislist
+  .yith-wcwl-add-to-wishlist
+    .yith-wcwl-add-button.show
+      a.add_to_wishlist(data-product-type='variable', data-product-id='1499', href='#')
+        | add to whislist
+      img#add-items-ajax-loading.ajax-loading(height='16', width='16', style='visibility: hidden;', alt='', src='img/wpspin_light.gif')
+    .yith-wcwl-wishlistaddedbrowse.hide(style='display: none;')
+      span.feedback Product added!
+      a(href='#') Browse Wishlist
+    .yith-wcwl-wishlistexistsbrowse.hide(style='display: none;')
+      span.feedback The product is already in the wishlist!
+      a(href='#') Browse Wishlist
+    div(style='clear: both;')
+    .yith-wcwl-wishlistaddresponse
+
+mixin product_view(data_tipe)
+  li.item-list.product(data-type='#{data_tipe}')
+    .item-inner
+      span.onsale Sale!
+      figure.item-img
+
+        a(href='#')
+          img.img1(alt='', src='dummy/woo/270/hoodie_1_front.jpg')
+          img.img2(alt='', src='dummy/woo/270/hoodie_1_back.jpg')
+      .item-action
+        .star-rating(title='Rated 4.50 out of 5')
+          span(style='width: 90%;')
+            strong.rating 4.50
+            | out of 5
+        span.action
+          a.add_to_cart_button.button(href='#') view product
+          //- a.to-whislist(href='#')
+            | add to whislist
+          +whislist
+        // End .action
+      // End .item-action
+    // End .item-inner
+    article.item-info.product-info
+      h3.title-item.title-product Woo Single #2
+      p.des-product.text
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, dolor unde temporibus odit earum a minima repudiandae officia error cupiditate!
+      span.price
+        span.from From: 
+        del
+          span.amount £3
+        ins
+          span.amount £2
+    // End .product-info
+  // End .product
+
+mixin product_options(data_tipe)
+  li.item-list.product(data-type='#{data_tipe}')
+    .item-inner
+      span.onsale Sale!
+      figure.item-img
+
+        a(href='#')
+          img.img1(alt='', src='dummy/woo/270/hoodie_1_front.jpg')
+          img.img2(alt='', src='dummy/woo/270/hoodie_1_back.jpg')
+      .item-action
+        .star-rating(title='Rated 4.50 out of 5')
+          span(style='width: 90%;')
+            strong.rating 4.50
+            | out of 5
+        span.action
+          a.button.product_type_variable(href='#') Select options
+          //- a.to-whislist(href='#')
+            | add to whis
+          +whislist
+        // End .action
+      // End .item-action
+    // End .item-inner
+    article.item-info.product-info
+      h3.title-item.title-product Woo Single #2
+      span.price
+        span.from From: 
+        del
+          span.amount £3
+        ins
+          span.amount £2
+    // End .product-info
+    // End .product
+
+mixin product_add_to_cart(data_tipe)
+  li.item-list.product(data-type='#{data_tipe}')
+    .item-inner
+      span.onsale Sale!
+      figure.item-img
+        a(href='#')
+          img.img1(alt='', src='dummy/woo/270/hoodie_1_front.jpg')
+          img.img2(alt='', src='dummy/woo/270/hoodie_1_back.jpg')
+      .item-action
+        .star-rating(title='Rated 4.50 out of 5')
+          span(style='width: 90%;')
+            strong.rating 4.50
+            | out of 5
+        span.action
+          a.button.product_type_simple(href='#') Add to cart
+          // <a href="#" class="added_to_cart" title="View Cart &#x2192;">View Cart &#x2192;</a>
+          //- a.to-whislist(href='#')
+            | add to whis
+          +whislist
+        // End .action
+      // End .item-action
+    // End .item-inner
+    article.item-info.product-info
+      h3.title-item.title-product Woo Single #2
+      span.price
+        span.from From: 
+        del
+          span.amount £3
+        ins
+          span.amount £2
+    // End .product-info
+  // End .product
+
+mixin breadcrumb
+  nav.breadcrumb(itemprop='breadcrumb')
+    a.home(href='#') Home
+    span >
+    a(href='#') Shop
+    span >
+    span.current
+      | Ship Your Idea
+
+mixin blog
+  article.hentry.format-Standard
+    .inner-entry
+      .entry-media
+        a(href="#")
+          img(alt="", src="dummy/blog/blog1.jpg")
+
+    header.entry-header
+      h2.entry-title
+        a(href='#') format Standard
+
+    .entry-meta
+      time.published(datetime='2012-01-07T07:07:21+00:00', title='Saturday, January 7th, 2012, 7:07 am') January 7, 2012
+      span.author.vcard
+        a.url.fn.n(rel='author', href='#', title='themedemos') themedemos
+      span.comments-link
+        a(href="#") one comment
+      span.post_tag
+        span.before Tags:
+        a(href='#', rel='tag') sticky
+        | ,
+        a(href='#', rel='tag') templates
+      span.category
+        span.before Posted in:
+        a(href='#', rel='tag') sticky
+        | ,
+        a(href='#', rel='tag') template
+
+    .entry-content
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, quae, autem dolor sapiente nisi quasi consequuntur repellat consectetur quaerat veniam deserunt ratione dignissimos blanditiis adipisci aliquam at perferendis molestiae repellendus odit omnis laborum maxime optio dolorum ducimus eius. Dicta, a, numquam, doloribus eum quasi odio
+
+    .line
+
+mixin portfolio
+  li.item-list.portfolio
+    .item-inner
+      figure.item-img
+        a(href='#')
+          img.img1(alt='', src='dummy/portfolio.jpg')
+          //- img.img2(alt='', src='dummy/woo/270/hoodie_1_back.jpg')
+      .item-action
+        span.action
+          a.button(href='#') view portfolio 
+        // End .action
+      // End .item-action
+    // End .item-inner
+    article.item-info.portfolio-info
+      h3.title-item.title-portfolio portfolio title
+    // End .product-info
+  // End .portfolio
+
+
+
+
+mixin photo
+  li.item-list.photo
+    .item-inner
+      figure.item-img
+        a(href='#')
+          img.img1(alt='', src='dummy/portfolio.jpg')
+          //- img.img2(alt='', src='dummy/woo/270/hoodie_1_back.jpg')
+      article.item-info.photo-info
+        h3.title-item.title-photo photo title
+    // End .product-info
+  // End .portfolio
+
+
+
+//- Widget Bottom
+mixin best_sellers
+  section.widget.woocommerce.widget_best_sellers.widget-woocommerce.widget_best_sellers
+    .widget-wrap.widget-inside
+      h3.widget-title best sellers
+      ul.product_list_widget
+        li
+          a(href='#', title='')
+            img.attachment-shop_thumbnail.wp-post-image(alt='', src='dummy/product-40x40.jpg')
+            | flying ninja
+          del
+            span.amount rp15
+          ins
+            span.amount rp12
+        li
+          a(href='#', title='')
+            img.attachment-shop_thumbnail.wp-post-image(alt='', src='dummy/product-40x40.jpg')
+            | happy ninja
+          span.amount rp18
+        li
+          a(href='#', title='')
+            img.attachment-shop_thumbnail.wp-post-image(alt='', src='dummy/product-40x40.jpg')
+            | happy ninja
+          span.amount rp35
+        li
+          a(href='#', title='')
+            img.attachment-shop_thumbnail.wp-post-image(alt='', src='dummy/product-40x40.jpg')
+            | premium quality
+          span.amount rp20
+        li
+          a(href='#', title='')
+            img.attachment-shop_thumbnail.wp-post-image(alt='', src='dummy/product-40x40.jpg')
+            | ninja silhouette
+          span.amount rp20
+mixin recent_reviews
+  section.widget.woocommerce.widget_recent_reviews.widget-woocommerce.widget_recent_reviews
+    .widget-wrap.widget-inside
+      h3.widget-title recent reviews
+      ul.product_list_widget
+        li
+          a(href='#', title='')
+            img.attachment-shop_thumbnail.wp-post-image(alt='', src='dummy/product-40x40.jpg')
+            | woo single copy grouped
+          .star-rating(title='rated 5 out of 5')
+            span(style='width: 100%;')
+              strong.rating 5
+              | out of 5
+          | by indaam
+        li
+          a(href='#', title='')
+            img.attachment-shop_thumbnail.wp-post-image(alt='', src='dummy/product-40x40.jpg')
+            | woo single copy grouped
+          .star-rating(title='rated 2 out of 5')
+            span(style='width: 40%;')
+              strong.rating 2
+              | out of 5
+          | by indaam
+        li
+          a(href='#', title='')
+            img.attachment-shop_thumbnail.wp-post-image(alt='', src='dummy/product-40x40.jpg')
+            | woo single copy grouped
+          .star-rating(title='rated 3 out of 5')
+            span(style='width: 60%;')
+              strong.rating 3
+              | out of 5
+          | by indaam
+        li
+          a(href='#', title='')
+            img.attachment-shop_thumbnail.wp-post-image(alt='', src='dummy/product-40x40.jpg')
+            | woo single copy grouped
+          .star-rating(title='rated 5 out of 5')
+            span(style='width: 100%;')
+              strong.rating 5
+              | out of 5
+          | by indaam
+        li
+          a(href='#', title='')
+            img.attachment-shop_thumbnail.wp-post-image(alt='', src='dummy/product-40x40.jpg')
+            | woo ninja
+          .star-rating(title='rated 4 out of 5')
+            span(style='width: 80%;')
+              strong.rating 4
+              | out of 5
+          | by maria
+mixin recent_products
+  section.widget.woocommerce.widget_recent_products
+    h3.widget-title woo recent products
+    ul.product_list_widget
+      li
+        a(href='#', title='')
+          img.attachment-shop_thumbnail.wp-post-image(alt='', src='dummy/product-40x40.jpg')
+          | woo single copy grouped
+        span.from from: 
+        span.amount rp60
+      li
+        a(href='#', title='')
+          img.attachment-shop_thumbnail.wp-post-image(alt='', src='dummy/product-40x40.jpg')
+          | woo single #2
+        del
+          span.amount rp3
+        ins
+          span.amount rp2
+      li
+        a(href='#', title='')
+          img.attachment-shop_thumbnail.wp-post-image(alt='', src='dummy/product-40x40.jpg')
+          | woo album #4
+        span.amount rp9
+      li
+        a(href='#', title='')
+          img.attachment-shop_thumbnail.wp-post-image(alt='', src='dummy/product-40x40.jpg')
+          | woo single #1
+        span.amount rp3
+      li
+        a(href='#', title='')
+          img.attachment-shop_thumbnail.wp-post-image(alt='', src='dummy/product-40x40.jpg')
+          | woo album #3
+        span.amount rp9
+mixin random_products
+  section.widget.woocommerce.widget_random_products.widget-woocommerce.widget_random_products
+    .widget-wrap.widget-inside
+      h3.widget-title random products
+      ul.product_list_widget
+        li
+          a(href='#', title='')
+            img.attachment-shop_thumbnail.wp-post-image(alt='', src='dummy/product-40x40.jpg')
+            | premium quality
+          del
+            span.amount rp15
+          ins
+            span.amount rp12
+        li
+          a(href='#', title='')
+            img.attachment-shop_thumbnail.wp-post-image(alt='', src='dummy/product-40x40.jpg')
+            | woo logo
+          span.amount rp35
+        li
+          a(href='#', title='')
+            img.attachment-shop_thumbnail.wp-post-image(alt='', src='dummy/product-40x40.jpg')
+            | woo logo
+          del
+            span.amount rp20
+          ins
+            span.amount rp18
+        li
+          a(href='#', title='')
+            img.attachment-shop_thumbnail.wp-post-image(alt='', src='dummy/product-40x40.jpg')
+            | premium quality
+          span.amount rp20
+        li
+          a(href='#', title='')
+            img.attachment-shop_thumbnail.wp-post-image(alt='', src='dummy/product-40x40.jpg')
+            | woo album #1
+          span.amount rp9
+
+
+//- About
+
+//- Latest blog posts
+
+//- Product Tags
+
+//- GET IN TOUCH
+
+//- latest Posts
+
+
+//- Archives
+
+//- Contact us

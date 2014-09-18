@@ -1,0 +1,35 @@
+
+
+doctype 5
+html(lang="en")
+  head
+    title= pageTitle
+    script(type='text/javascript').
+      if (foo) {
+         bar(1 + 5)
+      }
+  body
+    h1 Jade - node template engine
+    #container.col
+      p.
+        Jade is a terse and simple
+        templating language with a
+        strong focus on performance
+        and powerful features.
+      p.
+        color misal apasas sabjsb jbdjks
+        asd dksd 
+      - var classes = ['baz']
+      a(class=classes)
+      p
+        | lorem strong
+    // End container
+
+mixin article(title, width)
+  .article
+    .article-wrapper
+      h1(class=title)
+        p No content provided
+        img(src=width)
+        
++article('Hello world', 400)

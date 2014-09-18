@@ -1,0 +1,107 @@
+.hentry
+  h1.page-title.entry-title
+    a(href='#', title='') My Account
+  .woocommerce
+    p.myaccount_user
+      | Hello,
+      strong indaam
+      | . From your account dashboard you can view your recent orders, manage your shipping and billing addresses and
+      a(href='#', title='') change your password
+      | .
+    h2 Recent Orders
+    table.shop_table.my_account_orders
+      thead
+        tr
+          th.order-number
+            span.nobr Order
+          th.order-date
+            span.nobr Date
+          th.order-status
+            span.nobr Status
+          th.order-total
+            span.nobr Total
+          th.order-actions  
+      tbody
+        tr.order
+          td.order-number
+            a(href='#', title='') #1596
+          td.order-date
+            time(datetime='2013-11-28', title='1385631919') November 28, 2013
+          td.order-status(style='text-align: left; white-space: nowrap;') On-hold
+          td.order-total
+            span.amount Rp417
+            | for 19 items
+          td.order-actions
+            a.button.view(href='#', title='') View
+        tr.order
+          td.order-number
+            a(href='#', title='') #1584
+          td.order-date
+            time(datetime='2013-11-25', title='1385394782') November 25, 2013
+          td.order-status(style='text-align: left; white-space: nowrap;') On-hold
+          td.order-total
+            span.amount Rp186
+            | for 10 items
+          td.order-actions
+            a.button.view(href='#', title='') View
+        tr.order
+          td.order-number
+            a(href='#', title='') #1516
+          td.order-date
+            time(datetime='2013-10-03', title='1380832637') October 3, 2013
+          td.order-status(style='text-align: left; white-space: nowrap;') On-hold
+          td.order-total
+            span.amount Rp355
+            | for 23 items
+          td.order-actions
+            a.button.view(href='#', title='') View
+        tr.order
+          td.order-number
+            a(href='#', title='')  #1502
+          td.order-date
+            time(datetime='2013-10-03', title='1380791550') October 3, 2013
+          td.order-status(style='text-align: left; white-space: nowrap;') On-hold
+          td.order-total
+            span.amount Rp143
+            | for 6 items
+          td.order-actions
+            a.button.view(href='#', title='') View
+    h2 My Addresses
+    p.myaccount_address The following addresses will be used on the checkout page by default.
+    .col2-set.addresses
+      .col-1.address
+        header.title
+          h3 Billing Address
+          a.edit(href='#', title='') Edit
+        address
+          | indam why
+          br
+          | ICL
+          br
+          | Jalan Piit No 1
+          br
+          | Apartement(Optional)
+          br
+          | Bandung
+          br
+          | Jawa Barat
+          br
+          | 40133
+      .col-2.address
+        header.title
+          h3 Shipping Address
+          a.edit(href='#', title='') Edit
+        address
+          | indam why
+          br
+          | ICL
+          br
+          | Jalan Piit No 1
+          br
+          | Apartement(Optional)
+          br
+          | Bandung
+          br
+          | Jawa Barat
+          br
+          | 40133

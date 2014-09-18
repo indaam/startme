@@ -1,0 +1,51 @@
+mixin nl
+  // .
+
+#ninja_forms_form_1_process_msg(style='display: none;')
+  img(alt='loading', src='')
+
+#ninja_forms_form_1_wrap.ninja-forms-form-wrap
+  #ninja_forms_form_1_response_msg.ninja-forms-response-msg(style='')
+  form#ninja_forms_form_1.ninja-forms-form(action='#', name='', method='post', enctype='multipart/form-data')
+    input(type='hidden', value='1', name='_ninja_forms_display_submit')
+    input#_form_id(type='hidden', value='1', name='_form_id')
+    #ninja_forms_form_1_all_fields_wrap.ninja-forms-all-fields-wrap
+      #ninja_forms_required_items Fields marked with a * are required
+      #ninja_forms_field_1_div_wrap.field-wrap.text-wrap.label-above(data-visible='1')
+        input#ninja_forms_field_1_type(type='hidden', value='text')
+        label#ninja_forms_field_1_label(for='ninja_forms_field_1') Your name (Required)
+          span.ninja-forms-req-symbol *
+        input#ninja_forms_field_1.ninja-forms-field.ninja-forms-req(type='text', rel='1', value='', name='ninja_forms_field_1', title='')
+        #ninja_forms_field_1_error.ninja-forms-field-error(style='display: none;')
+      #ninja_forms_field_2_div_wrap.field-wrap.text-wrap.label-above(data-visible='1')
+        input#ninja_forms_field_2_type(type='hidden', value='text')
+        label#ninja_forms_field_2_label(for='ninja_forms_field_2') Your Email (required)
+          span.ninja-forms-req-symbol *
+        input#ninja_forms_field_2.ninja-forms-field.ninja-forms-req(type='text', rel='2', value='', name='ninja_forms_field_2', title='')
+        #ninja_forms_field_2_error.ninja-forms-field-error(style='display: none;')
+      #ninja_forms_field_3_div_wrap.field-wrap.text-wrap.label-above(data-visible='1')
+        input#ninja_forms_field_3_type(type='hidden', value='text')
+        label#ninja_forms_field_3_label(for='ninja_forms_field_3') Subject
+        input#ninja_forms_field_3.ninja-forms-field(type='text', rel='3', value='', name='ninja_forms_field_3', title='')
+        #ninja_forms_field_3_error.ninja-forms-field-error(style='display: none;')
+      #ninja_forms_field_4_div_wrap.field-wrap.text-wrap.label-above(data-visible='1')
+        input#ninja_forms_field_4_type(type='hidden', value='text')
+        label#ninja_forms_field_4_label(for='ninja_forms_field_4') Address
+        input#ninja_forms_field_4.ninja-forms-field(type='text', rel='4', value='', name='ninja_forms_field_4', title='')
+        #ninja_forms_field_4_error.ninja-forms-field-error(style='display: none;')
+      #ninja_forms_field_5_div_wrap.field-wrap.text-wrap.label-above(data-visible='1')
+        input#ninja_forms_field_5_type(type='hidden', value='text')
+        label#ninja_forms_field_5_label(for='ninja_forms_field_5') Phone
+        input#ninja_forms_field_5.ninja-forms-field.ninja-forms-mask(type='text', rel='5', value='', name='ninja_forms_field_5', title='(999) 999-9999')
+        #ninja_forms_field_5_error.ninja-forms-field-error(style='display: none;')
+      #ninja_forms_field_6_div_wrap.field-wrap.textarea-wrap.label-above(data-visible='1')
+        input#ninja_forms_field_6_type(type='hidden', value='textarea')
+        label#ninja_forms_field_6_label(for='ninja_forms_field_6') Your message
+          span.ninja-forms-req-symbol *
+        textarea#ninja_forms_field_6.ninja-forms-field.ninja-forms-req(rel='6', name='ninja_forms_field_6')
+        #ninja_forms_field_6_error.ninja-forms-field-error(style='display: none;')
+      #ninja_forms_field_7_div_wrap.field-wrap.submit-wrap.label-left(data-visible='1')
+        input#ninja_forms_field_7.ninja-forms-field(type='submit', rel='7', value='Send', name='_ninja_forms_field_7')
+        #ninja_forms_field_7_error.ninja-forms-field-error(style='display: none;')
+// End #ninja_forms_form_1_wrap.ninja-forms-form-wrap
++nl

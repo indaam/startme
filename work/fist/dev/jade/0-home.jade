@@ -1,0 +1,208 @@
+include jade-libs/asset/mixin
+
++head("home", "http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Raleway:400,300,500,600,800,700,900")
+
+body
+  +ie_notice
+
+  header#page-header.header-one(role='banner')
+    nav#top-nav
+      .container
+        include jade-libs/element/nav-mini
+        include jade-libs/element/nav-account
+    // End #top-nav
+
+    #header
+      .container
+        include jade-libs/element/header-title
+        include jade-libs/element/navbar
+    // End #header
+  
+  include jade-libs/element/learn/featured
+
+  section#page-content
+    .container
+      main#page-main.page-main(role="main")
+        #content
+          include jade-libs/element/learn/intro
+          include jade-libs/element/learn/banner
+
+          // popular-products
+          section.products-wrap.popular-products.cl
+            h2.title-section
+              span featured Product
+            ul.wrap-item-list.products
+              +product_view("")
+              +product_view("")
+              +product_view("")
+              +product_view("")
+
+          // products-slider
+          section.products-wrap.products-slider.cl
+            h2.title-section
+              span recent products
+            ul.wrap-item-list.products.use-slider
+              +product_view("")
+              +product_view("")
+              +product_view("")
+              +product_view("")
+              +product_view("")
+              +product_view("")
+              +product_view("")
+              +product_view("")
+              +product_view("")
+              +product_view("")
+              +product_view("")
+              +product_view("")
+              +product_view("")
+              +product_view("")
+              +product_view("")
+              +product_view("")
+
+          // products-mini
+          section.products-wrap.wrap-products-mini.cl
+            h2.title-section
+              span Products Mini
+            ul.wrap-item-list.products.products-mini
+              +product_view("")
+              +product_view("")
+              +product_view("")
+              +product_view("")
+          section.home-features.cl
+            .container
+              include jade-libs/element/feature-testimonial
+              include jade-libs/element/feature-subscribe
+
+          // filter-product
+          section.products-wrap.filter-product.cl
+            h2.title-section
+              span Products Filter
+            ul.button-filter.add-clearfix.reset-list
+              li.active(data-value='all')
+                a(href='#') All
+              li(data-value='tsirt')
+                a(href='#') t-sirt
+              li(data-value='jeans')
+                a(href='#') Jeans
+              li(data-value='bags')
+                a(href='#') Bags
+            ul.wrap-item-list.products.products-mini
+              +product_view("tsirt")
+              +product_view("bags")
+              +product_view("jeans")
+              +product_view("tsirt")
+              +product_view("tsirt")
+              +product_view("bags")
+              +product_view("bags")
+              +product_view("tsirt")
+              +product_view("tsirt")
+              +product_view("jeans")
+              +product_view("bags")
+              +product_view("tsirt")
+              +product_view("tsirt")
+              +product_view("bags")
+              +product_view("jeans")
+              +product_view("tsirt")
+              +product_view("tsirt")
+              +product_view("bags")
+              +product_view("bags")
+              +product_view("tsirt")
+              +product_view("tsirt")
+              +product_view("jeans")
+              +product_view("bags")
+              +product_view("tsirt")
+
+      aside.page-sidebar.sidebar(role="complementary")
+
+  .theme-features
+    .container
+      .theme-features-col
+        .inner
+          .theme-features-img
+            img(src="dummy/features/theme-features4.png", alt="")
+          h3.theme-features-title Flexsible layout
+          p.theme-features-text iciis quae sulestiae porro harum debitis eum consequatur ratione ducimus eius officiis veritatis
+
+      .theme-features-col
+        .inner
+          .theme-features-img
+            img(src="dummy/features/theme-features1.png", alt="") 
+          h3.theme-features-title Free Updates
+          p.theme-features-text iciis quae sulestiae porro harum debitis eum consequatur ratione ducimus eius officiis veritatis
+
+
+      .theme-features-col 
+        .inner
+          .theme-features-img
+            img(src="dummy/features/theme-features5.png", alt="") 
+          h3.theme-features-title Unlimited color & more
+          p.theme-features-text iciis quae sulestiae porro harum debitis eum consequatur ratione ducimus eius officiis veritatis
+
+      .theme-features-col
+        .inner
+          .theme-features-img 
+            img(src="dummy/features/theme-features3.png", alt="") 
+          h3.theme-features-title Easy use
+          p.theme-features-text iciis quae sulestiae porro harum debitis eum consequatur ratione ducimus eius officiis veritatis
+
+  include jade-libs/element/widget-bottom
+  include jade-libs/element/learn/brand
+  include jade-libs/element/footer
+
+  +add_js
++end
+
+//- +footer_menu
+//- +woo_images
+//- +woo_cart_widget
+//- +add_js
+//- +blog_home_default
+//- +blog_home
+//- //- +blog_single
+//- +pagination
+
+//- +tokokoo_archive
+//- +woo_variations_form
+//- +product_meta
+//- +woo_tabs
+//- +woo_resul_count
+//- +woo_ordering
+//- +woo_ordering_ul
+//- +woo_message
+//- +woo_message_error
+//- +woo_star_rating
+//- +woo_price
+//- +woo_single_price
+//- +woo_onsale
+//- +woo_title_product("title of product")
+//- +woo_title_product_single("title of product")
+//- +woo_button
+//- +new_social
+//- +woo_summary("jus text")
+//- +related_products
+//- +upsells_products
+//- +page_title
+
+
+//- +entry_meta_time
+//- +entry_meta_tag
+//- +entry_meta_category
+//- +entry_meta_author
+//- +entry_summary("This is a sticky post. There are a few things to verify: The sticky post should be distinctly recognizable in some way in comparison to normal posts. You can style the .sticky class if you are using the post_class() function to generate your post classes, which is a best practice. They should show at the very top")
+//- +entry_title("just entry title")
+
+//- include jade-libs/element/blog-home
+//- include jade-libs/element/blog-single
+//- include jade-libs/element/comment
+//- include jade-libs/element/contact
+//- include jade-libs/element/feature-brand
+//- include jade-libs/element/feature-products
+//- include jade-libs/element/feature-testimonial
+//- include jade-libs/element/footer
+//- include jade-libs/element/header-menu
+//- include jade-libs/element/header-top
+//- include jade-libs/element/list-portfolio
+//- include jade-libs/element/list-product
+//- include jade-libs/element/widget-bottom
+//- include jade-libs/element/widget-mini
+//- include jade-libs/element/widget

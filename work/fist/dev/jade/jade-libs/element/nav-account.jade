@@ -1,0 +1,44 @@
+include ../asset/mixin
+
+ul.nav-account
+  li.login-menu
+    a(href='#') Login/Register
+    ul
+      li
+        .login-wrap
+          form.login(method='post')
+            p.form-row
+              label(for='username')
+                | Username or email
+                span.required *
+              input#username.input-text(type='text', name='username')
+            p.form-row
+              label(for='password')
+                | Password
+                span.required *
+              input#password.input-text(type='password', name='password')
+            .clear
+            p.form-row
+              label.remember(for='remember')
+                input#remember(type='checkbox', checked='checked', name='', value='1')
+                span Remember me
+              input(type='hidden', value='', name='')
+              input(type='hidden', value='', name='')
+              input.button(type='submit', value='login', name='')
+            .clear
+            p.form-row
+              a.lost_password(href='#') Lost Password?
+              a.register_now(href='#') Have Account? Register Now!
+  li.my-cart
+    a(href='#') my cart
+      span.total-cart 10
+    ul.cart-data
+      li
+        // Start here include woo_cart_widget
+        +woo_cart_widget
+  li.search-top
+    a(href='#') Search
+    ul
+      li
+        +searcform2
+// End .nav-account

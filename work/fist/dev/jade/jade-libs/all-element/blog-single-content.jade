@@ -1,0 +1,35 @@
+include ../asset/mixin
+article.hentry.format-Standard
+  .inner-entry
+    .entry-media
+      a(href="#")
+        img(alt="", src="dummy/blog/blog1.jpg")
+
+    //- header.entry-header
+      h2.entry-title
+        a(href='#') format Standard
+    
+    // if page remove post-Tag & category
+    .entry-meta
+      time.published(datetime='2012-01-07T07:07:21+00:00', title='Saturday, January 7th, 2012, 7:07 am') January 7, 2012
+      span.author.vcard
+        a.url.fn.n(rel='author', href='#', title='themedemos') themedemos
+      span.comments-link
+        a(href="#") one comment
+      span.post_tag
+        span.before Tags:
+        a(href='#', rel='tag') sticky
+        | ,
+        a(href='#', rel='tag') templates
+      span.category
+        span.before Posted in:
+        a(href='#', rel='tag') sticky
+        | ,
+        a(href='#', rel='tag') template
+
+    .entry-content
+      +typo_test
+
+
+
+
