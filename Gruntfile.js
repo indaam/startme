@@ -11,6 +11,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-contrib-connect"),
     grunt.loadNpmTasks("grunt-contrib-clean"),
     grunt.loadNpmTasks('grunt-newer'),
+    grunt.loadNpmTasks('grunt-csscomb'),
+    grunt.loadNpmTasks('grunt-autoprefixer'),
     grunt.loadNpmTasks('grunt-prettify'),
     grunt.initConfig({
         pkg: grunt.file.readJSON("package.json"),
@@ -85,6 +87,31 @@ module.exports = function(grunt) {
             }
         },
 
+        csscomb: {
+            dynamic_mappings: {
+                expand: true,
+                cwd: "work/<%= pkg.dir %>/dist/assets/css/",
+                src: ['*.css', '!*.resorted.css'],
+                dest: "work/<%= pkg.dir %>/dist/assets/css/",
+                ext: '.resorted.css'
+            }
+        },
+
+        autoprefixer: {
+            // prefix all files
+            multiple_files: {
+                // options: {
+                //     diff: true
+                // },
+                expand: true,
+                flatten: true,
+                cwd: "work/<%= pkg.dir %>/dist/assets/css/",
+                src: ['*.css', '!*.prefix.css'],
+                dest: "work/<%= pkg.dir %>/dist/assets/css/",
+                ext: '.prefix.css'
+            }
+        },
+
         /*
         ============ copy: Copy files
         */
@@ -108,6 +135,12 @@ module.exports = function(grunt) {
                         cwd: "work/<%= pkg.dir %>/dev/",
                         src: [ "*.html", "*.txt" ],
                         dest: "work/<%= pkg.dir %>/dist/"
+                    },
+                    {
+                        expand: true,
+                        cwd: "work/<%= pkg.dir %>/dev/fonts",
+                        src: [ "**" ],
+                        dest: "work/<%= pkg.dir %>/dist/assets/fonts"
                     },
                  ]
             }
@@ -255,8 +288,9 @@ module.exports = function(grunt) {
                 files: [ "work/<%= pkg.dir %>/dev/*.html" ],
                 tasks: [ "newer:copy" ]
             },
-            file: {
-                files: [ "work/<%= pkg.dir %>/app/view/**/*" ]
+            html: {
+                files: [ "work/<%= pkg.dir %>/dist/*.html" ],
+                tasks: [ "newer:prettify" ]
             }
         },
         connect: {
@@ -268,6 +302,18 @@ module.exports = function(grunt) {
         }
     }),
     
-    grunt.registerTask("startme", [ "copy", "uglify", "connect:server", "watch" ]),
-    grunt.registerTask("buildme", [ "copy", "uglify", "connect:server" ]);
+    grunt.registerTask("csscombme",         [ "csscomb"]),
+    grunt.registerTask("autoprefixerme",    [ "autoprefixer"]),
+    grunt.registerTask("uglifyme",          [ "uglify"]),
+    grunt.registerTask("cssminme",          [ "cssmin"]),
+    grunt.registerTask("compassme",         [ "compass"]), 
+    grunt.registerTask("prettifyme",        [ "prettify"]), 
+    grunt.registerTask("concatme",          [ "concat"]), 
+    grunt.registerTask("jshintme",          [ "jshint"]), 
+    grunt.registerTask("cleanme",           [ "clean"]), 
+    grunt.registerTask("jademe",            [ "jade"]), 
+    grunt.registerTask("connectme",         [ "connect:server", "watch" ]), 
+    grunt.registerTask("copyme",            [ "copy"]),
+    grunt.registerTask("startme",           [ "copy", "uglify", "prettify", "watch" ]),
+    grunt.registerTask("buildme",           [ "copy", "uglify", "prettify", "watch" ]);
 }; 
