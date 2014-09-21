@@ -35,6 +35,13 @@ module.exports = function(grunt) {
             }
         },
 
+        clean: {
+            assets: ["work/<%= pkg.dir %>/dist/assets/**/*"],
+            all: ["work/<%= pkg.dir %>/dist/assets/*"],
+            beautiful: ["work/<%= pkg.dir %>/dist/beautiful/*"],
+            html: ["work/<%= pkg.dir %>/dist/*.html"]
+        },
+
         /*
         ============ compass: CSS Preprocessor
         */
@@ -43,7 +50,7 @@ module.exports = function(grunt) {
                 options: {
                     config: "config.rb",
                     sassDir: 'work/<%= pkg.dir %>/dev/css',
-                    imagesDir: 'work/<%= pkg.dir %>/dev/img',
+                    imagesDir: 'work/<%= pkg.dir %>/dist/assets/img',
                     cssDir: 'work/<%= pkg.dir %>/dist/assets/css',
                 }
             }
@@ -126,6 +133,12 @@ module.exports = function(grunt) {
                     },
                     {
                         expand: true,
+                        cwd: "work/<%= pkg.dir %>/dev/js/",
+                        src: [ "*.js", "*.txt" ],
+                        dest: "work/<%= pkg.dir %>/dist/assets/js/"
+                    },
+                    {
+                        expand: true,
                         cwd: "work/<%= pkg.dir %>/dev/js/vendor/",
                         src: [ "*.js", "*.txt" ],
                         dest: "work/<%= pkg.dir %>/dist/assets/js/vendor/"
@@ -195,9 +208,9 @@ module.exports = function(grunt) {
                 files: [
                     {
                         expand: true,
-                        cwd: "work/<%= pkg.dir %>/dev/js/",
+                        cwd: "work/<%= pkg.dir %>/dist/assets/js/",
                         // src: [ "*.js", "!*.min.js" ],
-                        src: [ "*.js", "!*.min.js" ],
+                        src: [ "*.js", "!*.beautify.js", "!*.min.js" ],
                         dest: "work/<%= pkg.dir %>/dist/assets/js/",
                         ext: ".min.js"
                     },
@@ -249,9 +262,9 @@ module.exports = function(grunt) {
                 files: [
                     {
                         expand: true,
-                        cwd: "work/<%= pkg.dir %>/dev/js/",
+                        cwd: "work/<%= pkg.dir %>/dist/assets/js/",
                         // src: [ "*.js", "!*.min.js" ],
-                        src: [ "*.js", "!*.beautify.js" ],
+                        src: [ "*.js", "!*.beautify.js", "!*.min.js" ],
                         dest: "work/<%= pkg.dir %>/dist/assets/js/",
                         ext: ".beautify.js"
                     },
@@ -274,7 +287,7 @@ module.exports = function(grunt) {
                 // tasks: [ "newer:compass" ]
             },
             js: {
-                files: [ "work/<%= pkg.dir %>/dev/js/**/*" ],
+                files: [ "work/<%= pkg.dir %>/dist/assets/js/**/*" ],
                 tasks: [ "newer:uglify" ]
             },
             img: {
@@ -288,10 +301,14 @@ module.exports = function(grunt) {
                 files: [ "work/<%= pkg.dir %>/dev/*.html" ],
                 tasks: [ "newer:copy" ]
             },
-            html: {
-                files: [ "work/<%= pkg.dir %>/dist/*.html" ],
-                tasks: [ "newer:prettify" ]
-            }
+            jscopy: {
+                files: [ "work/<%= pkg.dir %>/dev/js/**/*" ],
+                tasks: [ "newer:copy" ]
+            },
+            // html: {
+            //     files: [ "work/<%= pkg.dir %>/dist/*.html" ],
+            //     tasks: [ "newer:prettify" ]
+            // }
         },
         connect: {
             server: {
@@ -315,5 +332,5 @@ module.exports = function(grunt) {
     grunt.registerTask("connectme",         [ "connect:server", "watch" ]), 
     grunt.registerTask("copyme",            [ "copy"]),
     grunt.registerTask("startme",           [ "copy", "uglify", "prettify", "watch" ]),
-    grunt.registerTask("buildme",           [ "copy", "uglify", "prettify", "watch" ]);
-}; 
+    grunt.registerTask("buildme",           [ "clean", "copy", "uglify", "prettify", "compass", "cssmin" ]);
+};
