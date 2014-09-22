@@ -1,5 +1,4 @@
-How to use?
-
+## How to use?
 1. Install node.js
 2. Install ruby installer
 3. Open terminal > gem install compass
