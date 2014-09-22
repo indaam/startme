@@ -17,6 +17,7 @@
     "grunt-contrib-less": "*",
     "grunt-contrib-uglify": "*",
     "grunt-contrib-watch": "*",
+    "grunt-csscomb": "^3.0.0",
     "grunt-newer": "*",
     "grunt-prettify": "^0.3.5"
   }
