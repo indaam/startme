@@ -11,7 +11,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-contrib-connect"),
     grunt.loadNpmTasks("grunt-contrib-clean"),
     grunt.loadNpmTasks('grunt-newer'),
-    grunt.loadNpmTasks('grunt-csscomb'),
+    // grunt.loadNpmTasks('grunt-csscomb'),
     grunt.loadNpmTasks('grunt-autoprefixer'),
     grunt.loadNpmTasks('grunt-prettify'),
     grunt.initConfig({
@@ -28,6 +28,7 @@ module.exports = function(grunt) {
                 files: [ {
                     expand: true,
                     cwd: "work/<%= pkg.dir %>/dev/",
+                    // cwd: "work/",
                     src: [ "*.jade" ],
                     dest: "work/<%= pkg.dir %>/dist/",
                     ext: ".html"
@@ -94,15 +95,15 @@ module.exports = function(grunt) {
             }
         },
 
-        csscomb: {
-            dynamic_mappings: {
-                expand: true,
-                cwd: "work/<%= pkg.dir %>/dist/assets/css/",
-                src: ['*.css', '!*.resorted.css'],
-                dest: "work/<%= pkg.dir %>/dist/assets/css/",
-                ext: '.resorted.css'
-            }
-        },
+        // csscomb: {
+        //     dynamic_mappings: {
+        //         expand: true,
+        //         cwd: "work/<%= pkg.dir %>/dist/assets/css/",
+        //         src: ['*.css', '!*.resorted.css'],
+        //         dest: "work/<%= pkg.dir %>/dist/assets/css/",
+        //         ext: '.resorted.css'
+        //     }
+        // },
 
         autoprefixer: {
             // prefix all files
@@ -178,7 +179,7 @@ module.exports = function(grunt) {
                 cwd: 'work//<%= pkg.dir %>/dist/',
                 ext: '.html',
                 src: ['*.html'],
-                dest: 'work//<%= pkg.dir %>/dist/beautiful/'
+                dest: 'work//<%= pkg.dir %>/dist/'
             },
         },
 
@@ -305,14 +306,18 @@ module.exports = function(grunt) {
                 files: [ "work/<%= pkg.dir %>/dev/js/**/*" ],
                 tasks: [ "newer:copy" ]
             },
-            // html: {
-            //     files: [ "work/<%= pkg.dir %>/dist/*.html" ],
-            //     tasks: [ "newer:prettify" ]
-            // }
+            jadehtml: {
+                files: [ "work/<%= pkg.dir %>/dev/*.jade" ],
+                tasks: [ "newer:jade" ]
+            },
+            prettify: {
+                files: [ "work/<%= pkg.dir %>/dist/*.html" ],
+                tasks: [ "newer:prettify" ]
+            }
         },
         connect: {
             server: {
-                options: {
+                 options: {
                     port: 666
                 }
             }
@@ -328,7 +333,8 @@ module.exports = function(grunt) {
     grunt.registerTask("concatme",          [ "concat"]), 
     grunt.registerTask("jshintme",          [ "jshint"]), 
     grunt.registerTask("cleanme",           [ "clean"]), 
-    grunt.registerTask("jademe",            [ "jade"]), 
+    grunt.registerTask("jademe",            [ "jade", "prettify", "watch"]), 
+    // grunt.registerTask("startmedev",        [ "jade", "prettify", "watch"]), 
     grunt.registerTask("connectme",         [ "connect:server", "watch" ]), 
     grunt.registerTask("copyme",            [ "copy"]),
     grunt.registerTask("startme",           [ "copy", "uglify", "prettify", "watch" ]),

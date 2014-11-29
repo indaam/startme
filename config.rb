@@ -2,7 +2,7 @@
 
 # Set this to the root of your project when deployed:
 
-$dir = "culinier";
+$dir = "first";
 
 http_path = "/"
 css_dir = "work/"+$dir+"/dist/assets/css"

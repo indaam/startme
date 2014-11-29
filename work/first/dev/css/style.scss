@@ -1,0 +1,79 @@
+@import "compass";
+@import "libs";
+.box{
+	padding: 120px;
+}
+
+/*
+*====================== Button Mixin ===================
+*/
+@mixin button($color, $block:false){
+	background-color: $color;
+	border: 1px solid darken($color, 10%);
+	color: #fff;
+	padding: 12px;
+	text-transform: uppercase;
+	cursor: pointer;
+	font-family: $font-family-sans-serif;
+	@include inline-block;
+	&:hover{
+		background-color: darken($color, 10%);
+		border: 1px solid darken($color, 20%);
+	}
+}
+
+.button-blue{
+	@include button(#3AC1F2);
+}
+
+.button-red{
+	@include button(#F23426);
+}
+
+.button-orange{
+	@include button(#E88719);
+}
+
+/*
+*====================== Button Class ===================
+*/
+.base-button{
+	color: #fff;
+	padding: 12px;
+	text-transform: uppercase;
+	@include inline-block;
+	cursor: pointer;
+	font-family: $font-family-sans-serif;
+	&:hover{
+		background-color: darken(#3AC1F2, 10%);
+		border: 1px solid darken(#3AC1F2, 20%);
+	}
+}
+
+.button{
+	@extend .base-button;
+	&.blue{
+		background-color: #3AC1F2;
+		border: 1px solid darken(#3AC1F2, 10%);
+		&:hover{
+			background-color: darken(#3AC1F2, 10%);
+			border: 1px solid darken(#3AC1F2, 20%);
+		}
+	}
+	&.red{
+		background-color: #F23426;
+		border: 1px solid darken(#F23426, 10%);
+		&:hover{
+			background-color: darken(#F23426, 10%);
+			border: 1px solid darken(#F23426, 20%);
+		}
+	}
+	&.orange{
+		background-color: #E88719;
+		border: 1px solid darken(#E88719, 10%);
+		&:hover{
+			background-color: darken(#E88719, 10%);
+			border: 1px solid darken(#E88719, 20%);
+		}
+	}
+}
