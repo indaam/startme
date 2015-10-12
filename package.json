@@ -1,55 +1,48 @@
 {
   "name": "startme",
   "version": "0.1.1",
-  "dev": "indaam",
-  "dir": "first",
+  "dev": "xion",
+  "dirc": "../indaam/gntu-laravel/public/assets",
+  "dir": "../indaam/cbk/public/assets",
+  "bladeexp": "../indaam/experience/app",
+  "blade": "../indaam/cbk/resources",
+  "dirgntu": "../indaam/gntu/web/assets",
+  "dirpleasent": "../indaam/experience/public/assets/pleasantresort",
+  "dirxx": "../indaam/ikea-live/public/assets",
+  "dirikea": "../indaam/ikea-campaign/public/assets",
+  "dirgntular": "../indaam/gntu-laravel/public/assets",
+  "private": true,
   "description": "A Front End web tools",
   "author": {
     "name": "Indam",
     "url": "http://indaam.net"
   },
   "licenses": [
-  {
-    "type": "MIT",
-    "url": "http://opensource.org/licenses/MIT"
-  }],
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
   "dependencies": {},
   "devDependencies": {
-<<<<<<< HEAD
-  "grunt": "~0.4.5",
-  "grunt-contrib-clean": "*",
-  "grunt-contrib-compass": "*",
-  "grunt-contrib-concat": "~0.4.0",
-  "grunt-contrib-connect": "~0.8.0",
-  "grunt-contrib-copy": "~0.5.0",
-  "grunt-contrib-cssmin": "~0.10.0",
-  "grunt-contrib-imagemin": "*",
-  "grunt-contrib-jade": "~0.8.0",
-  "grunt-contrib-jshint": "~0.10.0",
-  "grunt-contrib-less": "*",
-  "grunt-contrib-uglify": "*",
-  "grunt-contrib-watch": "*",
-  "grunt-newer": "*",
-  "grunt-prettify": "^0.3.5",
-  "grunt-autoprefixer": "~1.0.1"
-=======
+    "css-condense": "0.0.6",
     "grunt": "~0.4.5",
+    "grunt-autoprefixer": "~1.0.1",
     "grunt-contrib-clean": "*",
     "grunt-contrib-compass": "*",
     "grunt-contrib-concat": "~0.4.0",
     "grunt-contrib-connect": "~0.8.0",
     "grunt-contrib-copy": "~0.5.0",
-    "grunt-contrib-cssmin": "~0.10.0",
+    "grunt-contrib-cssmin": "^0.14.0",
     "grunt-contrib-imagemin": "*",
     "grunt-contrib-jade": "~0.8.0",
     "grunt-contrib-jshint": "~0.10.0",
     "grunt-contrib-less": "*",
     "grunt-contrib-uglify": "*",
     "grunt-contrib-watch": "*",
-    "grunt-csscomb": "^3.0.0",
+    "grunt-cssc": "^0.2.6",
+    "grunt-csscomb": "^3.1.0",
     "grunt-newer": "*",
-    "grunt-prettify": "^0.3.5",
-    "grunt-autoprefixer": "~1.0.1"
->>>>>>> 14a8e6bbea1bcfd8bf80323364e0dd2d9bac112a
+    "grunt-prettify": "^0.3.5"
   }
 }
