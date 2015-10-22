@@ -174,7 +174,9 @@ module.exports = function(grunt) {
             }
         }, 
 
-        // Prettify a directory of files
+        /*
+        ============ Prettify HTML
+        */
         prettify:{
             options: {
                 indent: 1,
@@ -197,6 +199,9 @@ module.exports = function(grunt) {
             },
         },
 
+        /*
+        ============ Minify CSS
+        */
         cssminx: {
           minify: {
                 expand: true,
@@ -307,23 +312,25 @@ module.exports = function(grunt) {
         //  }
         // },
 
-          cssc: {
+        cssc: {
             csscFirstSet: {
-              files: {
-                '<%= pkg.dir %>/css/style.css': '<%= pkg.dir %>/css/style2.css'
-              }
+                files: {
+                    '<%= pkg.dir %>/css/style.css': '<%= pkg.dir %>/css/style2.css'
+                }
             }
-          },
+        },
 
-          css_mqpacker: {
+        /*
+        ============ Sorting Media Query
+        */
+        css_mqpacker: {
             options: {
-              // map: {
-              //   inline: false,
-              //   sourcesContent: false
-              // }
-              map: false
+                // map: {
+                //   inline: false,
+                //   sourcesContent: false
+                // }
+                map: false
             },
-
             main: {
                 expand: true,
                 cwd: "<%= pkg.dir %>/css/",
@@ -331,7 +338,7 @@ module.exports = function(grunt) {
                 dest: "<%= pkg.dir %>/css/",
                 ext: ".sort.css"
             }
-          },
+        },
 
         /*  
         ============ watch: Watch you file save
@@ -398,19 +405,12 @@ module.exports = function(grunt) {
     grunt.registerTask("jshintme",          [ "jshint"]), 
     grunt.registerTask("cleanme",           [ "clean"]), 
     grunt.registerTask("jademe",            [ "jade", "prettify", "watch"]), 
-    // grunt.registerTask("startmedev",        [ "jade", "prettify", "watch"]), 
     grunt.registerTask("connectme",         [ "connect:server", "watch" ]), 
     grunt.registerTask("copyme",            [ "copy"]),
     grunt.registerTask("startme",           [ "copy", "uglify", "prettify", "watch" ]),
     grunt.registerTask("buildme",           [ "clean", "copy", "uglify", "prettify", "compass", "cssmin" ]);
+    grunt.registerTask("cssmedia",          [ "css_mqpacker"]);
     grunt.registerTask("i",                 [ "watch" ]);
-    // grunt.registerTask("fix",               [ "clean", "uglify", "cssmin" ]);
-    grunt.registerTask("fix",               [ "uglify", "cssmin" ]);
-    grunt.registerTask("c",               [ "cssmin"]);
-
-    grunt.registerTask("cssmedia",               [ "css_mqpacker"]);
-    grunt.registerTask("cssmini",               [ "cssmin"]);
-    grunt.registerTask("ca",               [ "concat", "uglify"]);
-
-    grunt.registerTask("end",               [ "concat", "uglify", "cssmedia", "cssmini"]);
+    grunt.registerTask("end",               [ "concat", "uglify", "cssmedia", "cssmin"]);
+    //console.log(this.config.data.pkg);
 };

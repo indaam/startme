@@ -30,7 +30,10 @@ Thumbs.db
 .komodotools
 # Folders to ignore
 node_modules
+[Function]
 .sass-cache/
 .sass-cache/*
 *.sass-cache
 *.sass-cache/*
+*.~
+*.*~
